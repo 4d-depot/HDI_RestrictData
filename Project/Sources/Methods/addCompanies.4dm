@@ -13,7 +13,7 @@ $coll:=JSON Parse:C1218($file.getText(); Is collection:K8:32)
 
 //$companies:=ds.Companies.fromCollection($coll)
 
-For each ($name; $coll)
+For each ($name; $coll.slice(0; 3))
 	$comp:=ds:C1482.Companies.new()
 	$comp.name:=$name
 	$status:=$comp.save()

@@ -22,7 +22,7 @@ If ($works.length=0)
 	
 	$companies:=Form:C1466.selectedSales.companies.query($formula)
 	
-	Form:C1466.companies:=Form:C1466.ds.Companies.all().minus($companies).orderBy("name")
+	Form:C1466.companies:={values: Form:C1466.ds.Companies.all().minus($companies).orderBy("name").name}
 	
 End if 
 

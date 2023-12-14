@@ -130,9 +130,9 @@
 				},
 				"Popup Dropdown List": {
 					"type": "dropdown",
-					"left": 190,
-					"top": 367,
-					"width": 215,
+					"left": 498,
+					"top": 242,
+					"width": 101,
 					"height": 33,
 					"events": [
 						"onDataChange"
@@ -185,9 +185,9 @@
 				},
 				"Button3": {
 					"type": "button",
-					"text": "Add",
-					"top": 373,
-					"left": 35,
+					"text": "Add as customer",
+					"top": 202,
+					"left": 486,
 					"width": 120,
 					"height": 20,
 					"events": [
@@ -195,52 +195,10 @@
 					],
 					"method": "ObjectMethods/Button3.4dm"
 				},
-				"List Box2": {
-					"type": "listbox",
-					"left": 492,
-					"top": 95,
-					"width": 445,
-					"height": 246,
-					"events": [
-						"onClick",
-						"onHeaderClick",
-						"onDataChange",
-						"onSelectionChange"
-					],
-					"listboxType": "collection",
-					"dataSource": "Form:C1466.companies",
-					"selectionMode": "single",
-					"currentItemSource": "Form:C1466.selectedCompany",
-					"columns": [
-						{
-							"header": {
-								"text": "Header1",
-								"name": "Header1"
-							},
-							"name": "Column1",
-							"footer": {
-								"name": "Footer1"
-							},
-							"dataSource": "This:C1470.name",
-							"width": 200
-						},
-						{
-							"header": {
-								"name": "Header2",
-								"text": "Header4"
-							},
-							"name": "Column2",
-							"dataSource": "This:C1470.lastname",
-							"footer": {
-								"name": "Footer2"
-							}
-						}
-					]
-				},
 				"List Box6": {
 					"type": "listbox",
-					"left": 492,
-					"top": 355,
+					"left": 36,
+					"top": 388,
 					"width": 384,
 					"height": 157,
 					"events": [
@@ -282,8 +240,8 @@
 				"Button2": {
 					"type": "button",
 					"text": "Remove",
-					"top": 518,
-					"left": 522,
+					"top": 525,
+					"left": 440,
 					"width": 120,
 					"height": 20,
 					"events": [
@@ -298,6 +256,99 @@
 					"width": 92,
 					"height": 33,
 					"dataSource": "Form:C1466.companies.length"
+				},
+				"Text": {
+					"type": "text",
+					"text": "Customers",
+					"top": 152,
+					"left": 27,
+					"width": 149,
+					"height": 16
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Providers",
+					"top": 152,
+					"left": 632,
+					"width": 149,
+					"height": 16
+				},
+				"Popup Dropdown List2": {
+					"type": "dropdown",
+					"left": 505,
+					"top": 295,
+					"width": 101,
+					"height": 33,
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.companies",
+					"dataSourceTypeHint": "object",
+					"method": "ObjectMethods/Popup Dropdown List2.4dm"
+				},
+				"List Box2": {
+					"type": "listbox",
+					"left": 514,
+					"top": 348,
+					"width": 445,
+					"height": 163,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.customers",
+					"selectionMode": "none",
+					"currentItemSource": "Form:C1466.selectedSales",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.firstname",
+							"width": 120
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Header4"
+							},
+							"name": "Column2",
+							"dataSource": "This:C1470.lastname",
+							"footer": {
+								"name": "Footer2"
+							}
+						},
+						{
+							"header": {
+								"name": "Header12",
+								"text": "Header12"
+							},
+							"name": "Column12",
+							"dataSource": "This:C1470.category",
+							"footer": {
+								"name": "Footer12"
+							}
+						},
+						{
+							"header": {
+								"name": "Header13",
+								"text": "Header13"
+							},
+							"name": "Column13",
+							"dataSource": "This:C1470.company.name",
+							"footer": {
+								"name": "Footer13"
+							}
+						}
+					]
 				}
 			}
 		},
@@ -467,46 +518,6 @@
 							}
 						}
 					]
-				},
-				"Button5": {
-					"type": "button",
-					"text": "Get customers",
-					"top": 305,
-					"left": 352,
-					"width": 120,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button5.4dm"
-				},
-				"List Box5": {
-					"type": "listbox",
-					"left": 567,
-					"top": 228,
-					"width": 349,
-					"height": 134,
-					"events": [
-						"onClick",
-						"onHeaderClick",
-						"onDataChange",
-						"onSelectionChange"
-					],
-					"dataSource": "Form:C1466.targetCustomers",
-					"listboxType": "collection",
-					"selectionMode": "none",
-					"columns": [
-						{
-							"header": {
-								"text": "Header1",
-								"name": "Header12"
-							},
-							"name": "Column12",
-							"footer": {
-								"name": "Footer12"
-							}
-						}
-					]
 				}
 			}
 		},
@@ -560,5 +571,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 92
+	"geometryStamp": 119
 }

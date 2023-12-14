@@ -22,7 +22,9 @@ Case of
 		
 		$companies:=Form:C1466.selectedSales.companies.query($formula)
 		
-		Form:C1466.companies:=Form:C1466.ds.Companies.all().minus($companies).orderBy("name")
+		Form:C1466.companies:={values: Form:C1466.ds.Companies.all().minus($companies).orderBy("name").name}
+		
+		Form:C1466.customers:=Form:C1466.ds.Customers.all()
 		
 End case 
 
