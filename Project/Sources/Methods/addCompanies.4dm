@@ -11,6 +11,8 @@ $file:=File:C1566("/RESOURCES/companies")
 
 $coll:=JSON Parse:C1218($file.getText(); Is collection:K8:32)
 
+//$companies:=ds.Companies.fromCollection($coll)
+
 For each ($name; $coll)
 	$comp:=ds:C1482.Companies.new()
 	$comp.name:=$name

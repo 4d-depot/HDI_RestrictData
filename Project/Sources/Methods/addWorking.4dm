@@ -20,6 +20,9 @@ For each ($sp; ds:C1482.SalesPersons.all().slice(0; 3))
 		$comp:=ds:C1482.Companies.get($i)
 		$work.company:=$comp
 		
+		$category:=(Mod:C98($i; 2)=0) ? "A" : "B"
+		$work.category:=$category
+		
 		$status:=$work.save()
 		
 	End for 
@@ -36,6 +39,9 @@ For each ($sp; ds:C1482.SalesPersons.all().slice(7; 10))
 		$work.salesPerson:=$sp
 		$comp:=ds:C1482.Companies.get($i)
 		$work.company:=$comp
+		
+		$category:=(Mod:C98($i; 2)=0) ? "A" : "B"
+		$work.category:=$category
 		
 		$status:=$work.save()
 		

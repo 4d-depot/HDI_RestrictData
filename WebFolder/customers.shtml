@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font: Roboto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 4px;
+}
+
+tr:nth-child(even) {
+  background-color: #cce6ff;
+}
+</style>
+</head>
+	<body bgcolor="#ffffff">
+       <center><h3>Found customers</h3></center>
+		<br/>
+	<table class="table">	 
+		<tr><th>Salesperson</th><th>Customer</th><th>Total purchase</th>
+		</tr>
+    	<!--#4DEACH $customer in ds.Customers.query("sales.userId = :1"; userId)-->
+		<tr>
+		<td><!--#4DTEXT $customer.sales.firstname--></td>
+		<td ><!--#4DTEXT $customer.name--></td>
+		<td ><center><!--#4DTEXT String($customer.totalPurchase;"$###,##0")--></center></td>
+		</tr>
+		  <!--#4DENDEACH-->
+	</table>
+	</body>  
+</html>
+	  

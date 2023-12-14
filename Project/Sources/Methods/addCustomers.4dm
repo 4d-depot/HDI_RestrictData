@@ -11,10 +11,19 @@ $file:=File:C1566("/RESOURCES/customers.json")
 
 $coll:=JSON Parse:C1218($file.getText(); Is collection:K8:32)
 
-For each ($obj; $coll)
-	$customer:=ds:C1482.Customers.new()
-	$customer.firstname:=$obj.firstname
-	$customer.lastname:=$obj.lastname
+$customers:=ds:C1482.Customers.fromCollection($coll)
+
+$i:=1
+For each ($customer; ds:C1482.Customers.all())
+	
+	If ($i<=5)
+		$customer.company:=ds:C1482.Companies.get(1)
+	Else 
+		$customer.company:=ds:C1482.Companies.get(2)
+	End if 
+	
+	$i:=$i+1
+	
 	$status:=$customer.save()
 End for each 
 
