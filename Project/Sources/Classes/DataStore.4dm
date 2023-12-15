@@ -41,3 +41,11 @@ exposed Function selectCompany($company : cs:C1710.CompaniesEntity)
 	
 exposed Function getSalesPerson() : cs:C1710.SalesPersonsEntity
 	return Session:C1714.storage.info.salesPerson.first()
+	
+	
+exposed Function clearSession()
+	
+	Use (Session:C1714.storage)
+		Session:C1714.storage.info:=New shared object:C1526()
+	End use 
+	

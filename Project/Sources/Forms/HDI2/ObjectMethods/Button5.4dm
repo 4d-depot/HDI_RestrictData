@@ -17,3 +17,5 @@ $companies:=Form:C1466.selectedSales.companies.query($formula)
 
 Form:C1466.companies:={values: Form:C1466.ds.Companies.all().minus($companies).orderBy("name").name}
 
+LISTBOX SELECT ROWS:C1715(*; "CustomersLB"; Form:C1466.selectedSales.theCustomers; lk replace selection:K53:1)
+
