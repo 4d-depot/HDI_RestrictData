@@ -129,19 +129,6 @@
 					],
 					"class": "description"
 				},
-				"Popup Dropdown List": {
-					"type": "dropdown",
-					"left": 306,
-					"top": 311,
-					"width": 101,
-					"height": 33,
-					"events": [
-						"onDataChange"
-					],
-					"dataSource": "Form:C1466.categories",
-					"dataSourceTypeHint": "object",
-					"method": "ObjectMethods/Popup Dropdown List.4dm"
-				},
 				"SalesLB": {
 					"type": "listbox",
 					"left": 31,
@@ -160,10 +147,12 @@
 					"focusable": false,
 					"scrollbarHorizontal": "hidden",
 					"headerHeight": "21px",
+					"metaSource": "setColor",
+					"hideSystemHighlight": true,
 					"columns": [
 						{
 							"header": {
-								"text": "Header1",
+								"text": "Firstname",
 								"name": "Header3"
 							},
 							"name": "Column3",
@@ -176,7 +165,7 @@
 						{
 							"header": {
 								"name": "Header4",
-								"text": "Header4"
+								"text": "Lastname"
 							},
 							"name": "Column4",
 							"dataSource": "This:C1470.lastname",
@@ -189,23 +178,24 @@
 				},
 				"Button3": {
 					"type": "button",
-					"text": "+",
-					"top": 260,
-					"left": 427,
-					"width": 43,
+					"text": "Add",
+					"top": 247,
+					"left": 752,
+					"width": 80,
 					"height": 35,
 					"events": [
 						"onClick"
 					],
 					"method": "ObjectMethods/Button3.4dm",
 					"fontWeight": "bold",
-					"fontSize": 26,
-					"stroke": "#006400"
+					"fontSize": 14,
+					"stroke": "#006400",
+					"focusable": false
 				},
 				"SalesPersonsProvidersLB": {
 					"type": "listbox",
-					"left": 497,
-					"top": 243,
+					"left": 879,
+					"top": 227,
 					"width": 335,
 					"height": 157,
 					"events": [
@@ -222,10 +212,12 @@
 					"rowHeight": "20px",
 					"scrollbarHorizontal": "hidden",
 					"focusable": false,
+					"hideSystemHighlight": true,
+					"metaSource": "setColor",
 					"columns": [
 						{
 							"header": {
-								"text": "Provider",
+								"text": "Company",
 								"name": "Header5"
 							},
 							"name": "Column5",
@@ -252,18 +244,20 @@
 				},
 				"Text": {
 					"type": "text",
-					"text": "Sales persons",
-					"top": 211,
-					"left": 38,
-					"width": 149,
-					"height": 16
+					"text": "Associate a sales person to a company + a category of customers",
+					"top": 187,
+					"left": 79,
+					"width": 600,
+					"height": 16,
+					"fontWeight": "bold",
+					"stroke": "#800080"
 				},
 				"Text1": {
 					"type": "text",
-					"text": "Select a provider to manage",
+					"text": "Select a company to manage",
 					"top": 227,
 					"left": 300,
-					"width": 170,
+					"width": 250,
 					"height": 16
 				},
 				"Popup Dropdown List2": {
@@ -281,8 +275,8 @@
 				},
 				"CustomersLB": {
 					"type": "listbox",
-					"left": 862,
-					"top": 260,
+					"left": 38,
+					"top": 384,
 					"width": 535,
 					"height": 221,
 					"events": [
@@ -292,13 +286,16 @@
 						"onSelectionChange"
 					],
 					"listboxType": "collection",
-					"dataSource": "Form:C1466.customers",
+					"dataSource": "Form:C1466.allCustomers",
 					"selectionMode": "multiple",
 					"currentItemSource": "",
 					"focusable": false,
 					"scrollbarHorizontal": "hidden",
 					"rowHeight": "20px",
 					"headerHeight": "21px",
+					"rowFillSource": "",
+					"metaSource": "setColor",
+					"hideSystemHighlight": true,
 					"columns": [
 						{
 							"header": {
@@ -353,51 +350,126 @@
 				},
 				"Text2": {
 					"type": "text",
-					"text": "Customer category managed",
-					"top": 287,
-					"left": 300,
+					"text": "Customer category to manage",
+					"top": 227,
+					"left": 493,
 					"width": 250,
 					"height": 16
 				},
 				"Text3": {
 					"type": "text",
-					"text": "View here the customers handed by the selected sales person",
-					"top": 227,
-					"left": 865,
+					"text": "View here the customers managed by the selected sales person",
+					"top": 357,
+					"left": 79,
 					"width": 450,
-					"height": 16
+					"height": 16,
+					"stroke": "#800080",
+					"fontWeight": "bold"
 				},
 				"Text4": {
 					"type": "text",
-					"text": "Associate a sales person to a provider and category of customers",
-					"top": 160,
-					"left": 38,
-					"width": 500,
-					"height": 16
+					"text": "Sales person list",
+					"top": 215,
+					"left": 31,
+					"width": 140,
+					"height": 16,
+					"class": " ",
+					"fontWeight": "bold"
 				},
 				"Button5": {
 					"type": "button",
-					"text": "-",
-					"top": 412,
-					"left": 633,
-					"width": 43,
+					"text": "Remove this company",
+					"top": 389,
+					"left": 1009,
+					"width": 200,
 					"height": 35,
 					"events": [
 						"onClick"
 					],
 					"method": "ObjectMethods/Button5.4dm",
 					"fontWeight": "bold",
-					"fontSize": 26,
+					"fontSize": 14,
 					"stroke": "#dc143c",
-					"dataSource": ""
+					"dataSource": "",
+					"focusable": false
 				},
 				"Text5": {
 					"type": "text",
-					"text": "managed providers",
-					"top": 221,
-					"left": 497,
+					"text": "Managed companies",
+					"top": 206,
+					"left": 879,
 					"width": 149,
-					"height": 16
+					"height": 16,
+					"fontWeight": "bold"
+				},
+				"Radio Button": {
+					"type": "radio",
+					"text": "A",
+					"top": 247,
+					"left": 499,
+					"width": 70,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.categoryA",
+					"dataSourceTypeHint": "boolean",
+					"radioGroup": "radios"
+				},
+				"Radio Button1": {
+					"type": "radio",
+					"text": "B",
+					"top": 247,
+					"left": 570,
+					"width": 70,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.categoryB",
+					"dataSourceTypeHint": "boolean",
+					"radioGroup": "radios"
+				},
+				"Text6": {
+					"type": "text",
+					"text": "1",
+					"top": 183,
+					"left": 38,
+					"width": 30,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"fill": "#dda0dd",
+					"sizingY": "fixed",
+					"stroke": "automatic"
+				},
+				"Text7": {
+					"type": "text",
+					"text": "2",
+					"top": 357,
+					"left": 43,
+					"width": 30,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"fill": "#dda0dd",
+					"sizingY": "fixed"
+				},
+				"Button7": {
+					"type": "button",
+					"text": "Next",
+					"top": 502,
+					"left": 1018,
+					"width": 80,
+					"height": 35,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button7.4dm",
+					"fontWeight": "bold",
+					"fontSize": 14,
+					"stroke": "#006400",
+					"focusable": false
 				}
 			}
 		},
@@ -426,11 +498,11 @@
 				},
 				"Button4": {
 					"type": "button",
-					"text": "Button",
-					"top": 283,
-					"left": 44,
-					"width": 95,
-					"height": 55,
+					"text": "Authenticate",
+					"top": 317,
+					"left": 557,
+					"width": 120,
+					"height": 20,
 					"events": [
 						"onClick"
 					],
@@ -438,199 +510,98 @@
 				},
 				"Input3": {
 					"type": "input",
-					"left": 39,
-					"top": 189,
+					"left": 557,
+					"top": 237,
 					"width": 261,
-					"height": 33,
+					"height": 20,
 					"dataSource": "Form:C1466.identifier"
 				},
 				"Input4": {
 					"type": "input",
-					"left": 39,
-					"top": 242,
+					"left": 557,
+					"top": 277,
 					"width": 288,
-					"height": 33,
+					"height": 20,
 					"dataSource": "Form:C1466.password"
 				},
-				"Popup Dropdown List1": {
-					"type": "dropdown",
-					"left": 435,
-					"top": 147,
-					"width": 215,
-					"height": 33,
-					"events": [
-						"onDataChange"
-					],
-					"dataSource": "Form:C1466.companiesData",
-					"dataSourceTypeHint": "object",
-					"method": "ObjectMethods/Popup Dropdown List1.4dm"
-				},
-				"Input5": {
-					"type": "input",
-					"left": 655,
-					"top": 147,
-					"width": 224,
-					"height": 33,
-					"dataSource": "Form:C1466.selectedCompany.name"
-				},
-				"List Box3": {
+				"SalesLB2": {
 					"type": "listbox",
-					"left": 490,
-					"top": 394,
-					"width": 495,
-					"height": 185,
+					"left": 31,
+					"top": 237,
+					"width": 455,
+					"height": 81,
 					"events": [
-						"onClick",
-						"onHeaderClick",
-						"onDataChange",
 						"onSelectionChange"
 					],
 					"listboxType": "collection",
-					"dataSource": "Form:C1466.selectedCompany.customers",
-					"selectionMode": "none",
-					"columns": [
-						{
-							"header": {
-								"text": "Header1",
-								"name": "Header7"
-							},
-							"name": "Column7",
-							"footer": {
-								"name": "Footer7"
-							},
-							"dataSource": "This:C1470.firstname",
-							"width": 200
-						},
-						{
-							"header": {
-								"name": "Header8",
-								"text": "Header2"
-							},
-							"name": "Column8",
-							"footer": {
-								"name": "Footer8"
-							},
-							"dataSource": "This:C1470.lastname",
-							"width": 200
-						},
-						{
-							"header": {
-								"name": "Header9",
-								"text": "Header5"
-							},
-							"name": "Column9",
-							"footer": {
-								"name": "Footer9"
-							},
-							"dataSource": "This:C1470.category",
-							"width": 80
-						}
-					]
-				},
-				"List Box4": {
-					"type": "listbox",
-					"left": 25,
-					"top": 405,
-					"width": 445,
-					"height": 163,
-					"events": [
-						"onClick",
-						"onHeaderClick",
-						"onDataChange",
-						"onSelectionChange"
-					],
-					"listboxType": "collection",
-					"dataSource": "Form:C1466.salesPersonsWorking",
-					"selectionMode": "none",
-					"columns": [
-						{
-							"header": {
-								"text": "Header1",
-								"name": "Header10"
-							},
-							"name": "Column10",
-							"footer": {
-								"name": "Footer10"
-							},
-							"dataSource": "This:C1470.company.name",
-							"width": 200
-						},
-						{
-							"header": {
-								"name": "Header11",
-								"text": "Header4"
-							},
-							"name": "Column11",
-							"dataSource": "This:C1470.category",
-							"footer": {
-								"name": "Footer11"
-							}
-						}
-					]
-				},
-				"List Box1": {
-					"type": "listbox",
-					"left": 364,
-					"top": 219,
-					"width": 693,
-					"height": 147,
-					"events": [
-						"onClick",
-						"onHeaderClick",
-						"onDataChange",
-						"onSelectionChange"
-					],
-					"listboxType": "collection",
-					"dataSource": "Form:C1466.customers",
-					"selectionMode": "none",
+					"dataSource": "Form:C1466.salesPersons",
+					"selectionMode": "single",
 					"currentItemSource": "Form:C1466.selectedSales",
+					"method": "ObjectMethods/SalesLB2.4dm",
+					"rowHeight": "20px",
+					"focusable": false,
+					"scrollbarHorizontal": "hidden",
+					"headerHeight": "21px",
+					"metaSource": "setColor",
+					"hideSystemHighlight": true,
 					"columns": [
 						{
 							"header": {
-								"text": "Header1",
-								"name": "Header14"
+								"text": "Firstname",
+								"name": "Header22"
 							},
-							"name": "Column14",
+							"name": "Column22",
 							"footer": {
-								"name": "Footer14"
+								"name": "Footer22"
 							},
 							"dataSource": "This:C1470.firstname",
 							"width": 120
 						},
 						{
 							"header": {
-								"name": "Header15",
-								"text": "Header4"
+								"name": "Header23",
+								"text": "Lastname"
 							},
-							"name": "Column15",
+							"name": "Column23",
 							"dataSource": "This:C1470.lastname",
 							"footer": {
-								"name": "Footer15"
-							}
+								"name": "Footer23"
+							},
+							"width": 120
 						},
 						{
 							"header": {
-								"name": "Header16",
-								"text": "Header12"
+								"name": "Header29",
+								"text": "Header29"
 							},
-							"name": "Column16",
-							"dataSource": "This:C1470.category",
+							"name": "Column29",
 							"footer": {
-								"name": "Footer16"
-							}
+								"name": "Footer29"
+							},
+							"dataSource": "This:C1470.users.first().identifier"
 						},
 						{
 							"header": {
-								"name": "Header17",
-								"text": "Provider"
+								"name": "Header28",
+								"text": "Header28"
 							},
-							"name": "Column17",
-							"dataSource": "This:C1470.company.name",
+							"name": "Column28",
 							"footer": {
-								"name": "Footer17"
-							}
+								"name": "Footer28"
+							},
+							"dataSource": "\"a\""
 						}
 					]
+				},
+				"Text8": {
+					"type": "text",
+					"text": "Select a sales person to authenticate as them",
+					"top": 210,
+					"left": 46,
+					"width": 450,
+					"height": 16,
+					"stroke": "#800080",
+					"fontWeight": "bold"
 				}
 			}
 		},
@@ -638,10 +609,10 @@
 			"objects": {
 				"information3": {
 					"type": "input",
-					"top": 80,
+					"top": 83,
 					"left": 40,
-					"width": 420,
-					"height": 480,
+					"width": 488,
+					"height": 38,
 					"sizingY": "grow",
 					"dataSource": "Infos[3].Description",
 					"focusable": false,
@@ -657,18 +628,344 @@
 					],
 					"class": "description"
 				},
+				"Popup Dropdown List1": {
+					"type": "dropdown",
+					"left": 114,
+					"top": 314,
+					"width": 215,
+					"height": 30,
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.companies",
+					"dataSourceTypeHint": "object",
+					"method": "ObjectMethods/Popup Dropdown List1.4dm"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 146,
+					"left": 100,
+					"width": 874,
+					"height": 96,
+					"fill": "transparent"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 114,
+					"top": 193,
+					"width": 255,
+					"height": 33,
+					"dataSource": "Form:C1466.salesPerson.firstname"
+				},
+				"Input6": {
+					"type": "input",
+					"left": 395,
+					"top": 193,
+					"width": 255,
+					"height": 33,
+					"dataSource": "Form:C1466.salesPerson.lastname"
+				},
+				"Text10": {
+					"type": "text",
+					"text": "You are:",
+					"top": 157,
+					"left": 119,
+					"width": 450,
+					"height": 16,
+					"stroke": "#800080",
+					"fontWeight": "bold"
+				},
+				"Text11": {
+					"type": "text",
+					"text": "Select a company to work with",
+					"top": 269,
+					"left": 114,
+					"width": 450,
+					"height": 16,
+					"stroke": "#800080",
+					"fontWeight": "bold"
+				}
+			}
+		},
+		{
+			"objects": {
+				"List Box1": {
+					"type": "listbox",
+					"left": 689,
+					"top": 407,
+					"width": 682,
+					"height": 160,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.customers",
+					"selectionMode": "none",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header14"
+							},
+							"name": "Column14",
+							"footer": {
+								"name": "Footer14"
+							},
+							"dataSource": "This:C1470.firstname",
+							"width": 200
+						},
+						{
+							"header": {
+								"name": "Header15",
+								"text": "Header2"
+							},
+							"name": "Column15",
+							"footer": {
+								"name": "Footer15"
+							},
+							"dataSource": "This:C1470.lastname",
+							"width": 200
+						},
+						{
+							"header": {
+								"name": "Header16",
+								"text": "Header5"
+							},
+							"name": "Column16",
+							"footer": {
+								"name": "Footer16"
+							},
+							"dataSource": "This:C1470.category",
+							"width": 80
+						},
+						{
+							"header": {
+								"name": "Header17",
+								"text": "Header17"
+							},
+							"name": "Column17",
+							"dataSource": "This:C1470.company.name",
+							"footer": {
+								"name": "Footer17"
+							}
+						}
+					]
+				},
+				"SalesLB3": {
+					"type": "listbox",
+					"left": 31,
+					"top": 365,
+					"width": 455,
+					"height": 81,
+					"events": [
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.salesPersons",
+					"selectionMode": "single",
+					"currentItemSource": "Form:C1466.selectedSales",
+					"method": "ObjectMethods/SalesLB3.4dm",
+					"rowHeight": "20px",
+					"focusable": false,
+					"scrollbarHorizontal": "hidden",
+					"headerHeight": "21px",
+					"metaSource": "setColor",
+					"hideSystemHighlight": true,
+					"columns": [
+						{
+							"header": {
+								"text": "Firstname",
+								"name": "Header18"
+							},
+							"name": "Column18",
+							"footer": {
+								"name": "Footer18"
+							},
+							"dataSource": "This:C1470.firstname",
+							"width": 120
+						},
+						{
+							"header": {
+								"name": "Header19",
+								"text": "Lastname"
+							},
+							"name": "Column19",
+							"dataSource": "This:C1470.lastname",
+							"footer": {
+								"name": "Footer19"
+							},
+							"width": 120
+						}
+					]
+				},
+				"CustomersLB2": {
+					"type": "listbox",
+					"left": 31,
+					"top": 466,
+					"width": 535,
+					"height": 221,
+					"events": [],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.allCustomers",
+					"selectionMode": "none",
+					"currentItemSource": "",
+					"focusable": false,
+					"scrollbarHorizontal": "hidden",
+					"rowHeight": "20px",
+					"headerHeight": "21px",
+					"rowFillSource": "",
+					"metaSource": "setColor",
+					"hideSystemHighlight": true,
+					"columns": [
+						{
+							"header": {
+								"text": "Firstname",
+								"name": "Header30"
+							},
+							"name": "Column30",
+							"footer": {
+								"name": "Footer30"
+							},
+							"dataSource": "This:C1470.firstname",
+							"width": 120
+						},
+						{
+							"header": {
+								"name": "Header31",
+								"text": "Lastname"
+							},
+							"name": "Column31",
+							"dataSource": "This:C1470.lastname",
+							"footer": {
+								"name": "Footer31"
+							},
+							"width": 120
+						},
+						{
+							"header": {
+								"name": "Header32",
+								"text": "Category"
+							},
+							"name": "Column32",
+							"dataSource": "This:C1470.category",
+							"footer": {
+								"name": "Footer32"
+							},
+							"textAlign": "center",
+							"width": 80
+						},
+						{
+							"header": {
+								"name": "Header33",
+								"text": "Provider"
+							},
+							"name": "Column33",
+							"dataSource": "This:C1470.company.name",
+							"footer": {
+								"name": "Footer33"
+							},
+							"width": 200
+						}
+					]
+				},
+				"Text9": {
+					"type": "text",
+					"text": "Sales person list",
+					"top": 338,
+					"left": 36,
+					"width": 140,
+					"height": 16,
+					"class": " ",
+					"fontWeight": "bold"
+				},
+				"Input5": {
+					"type": "input",
+					"left": 678,
+					"top": 157,
+					"width": 255,
+					"height": 33,
+					"dataSource": "Form:C1466.company.name"
+				},
 				"Rectangle2": {
 					"type": "rectangle",
-					"top": 80,
-					"left": 480,
-					"width": 440,
-					"height": 480,
-					"visibility": "hidden",
-					"sizingX": "grow",
-					"sizingY": "grow",
-					"fill": "transparent",
-					"stroke": "#9400D3",
-					"strokeDashArray": "1 1"
+					"top": 111,
+					"left": 73,
+					"width": 874,
+					"height": 96,
+					"fill": "transparent"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 87,
+					"top": 158,
+					"width": 255,
+					"height": 33,
+					"dataSource": "Form:C1466.salesPerson.firstname"
+				},
+				"Input7": {
+					"type": "input",
+					"left": 368,
+					"top": 158,
+					"width": 255,
+					"height": 33,
+					"dataSource": "Form:C1466.salesPerson.lastname"
+				},
+				"Text12": {
+					"type": "text",
+					"text": "You are:",
+					"top": 122,
+					"left": 92,
+					"width": 450,
+					"height": 16,
+					"stroke": "#800080",
+					"fontWeight": "bold"
+				},
+				"Text13": {
+					"type": "text",
+					"text": "Aid to memory",
+					"top": 302,
+					"left": 36,
+					"width": 450,
+					"height": 16,
+					"stroke": "#800080",
+					"fontWeight": "bold"
+				},
+				"Text14": {
+					"type": "text",
+					"text": "View here the customers managed by the selected sales person",
+					"top": 450,
+					"left": 31,
+					"width": 450,
+					"height": 16,
+					"stroke": "automatic",
+					"fontWeight": "bold"
+				},
+				"Button2": {
+					"type": "button",
+					"text": "Get all customers",
+					"top": 376,
+					"left": 689,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm"
+				},
+				"Button6": {
+					"type": "button",
+					"text": "Clear session",
+					"top": 376,
+					"left": 859,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button6.4dm"
 				}
 			}
 		}
@@ -684,5 +981,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 327
+	"geometryStamp": 505
 }

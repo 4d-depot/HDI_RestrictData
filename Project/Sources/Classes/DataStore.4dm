@@ -34,13 +34,27 @@ exposed Function authenticate($identifier : Text; $password : Text) : Text
 	End if 
 	
 	
-exposed Function selectCompany($company : cs:C1710.CompaniesEntity)
+exposed Function selectCompany($company : cs:C1710.CompaniesEntity) : cs:C1710.CompaniesEntity
 	Use (Session:C1714.storage.info)
 		Session:C1714.storage.info.selectedCompany:=ds:C1482.Companies.newSelection().add($company).copy(ck shared:K85:29)
 	End use 
+	return $company
+	
 	
 exposed Function getSalesPerson() : cs:C1710.SalesPersonsEntity
-	return Session:C1714.storage.info.salesPerson.first()
+	If (Session:C1714.storage.info.salesPerson#Null:C1517)
+		return Session:C1714.storage.info.salesPerson.first()
+	Else 
+		return Null:C1517
+	End if 
+	
+	
+exposed Function getSelectedCompany() : cs:C1710.CompaniesEntity
+	If (Session:C1714.storage.info.selectedCompany#Null:C1517)
+		return Session:C1714.storage.info.selectedCompany.first()
+	Else 
+		return Null:C1517
+	End if 
 	
 	
 exposed Function clearSession()

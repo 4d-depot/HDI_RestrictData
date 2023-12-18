@@ -11,13 +11,9 @@
 
 $result:=Form:C1466.ds.authenticate(Form:C1466.identifier; Form:C1466.password)
 
-Form:C1466.salesPerson:=Form:C1466.ds.getSalesPerson()
-
-Form:C1466.salesPersonsWorking:=Form:C1466.salesPerson.workings
-
-
-Form:C1466.companiesData:={values: Form:C1466.salesPerson.companies.name}
-Form:C1466.companiesData.currentValue:=""
-
-
+If ($result="OK")
+	Form:C1466.salesPerson:=Form:C1466.ds.getSalesPerson()
+	FORM GOTO PAGE:C247(4)
+Else 
+End if 
 //RESTRequest
