@@ -25,7 +25,7 @@ Case of
 		
 		
 		Use (Storage:C1525)
-			Storage:C1525.allCustomers:=Form:C1466.ds.Customers.all().toCollection().copy(ck shared:K85:29)
+			Storage:C1525.allCustomers:=Form:C1466.ds.Customers.all()
 		End use 
 		
 		Form:C1466.allCustomers:=Storage:C1525.allCustomers
@@ -53,10 +53,10 @@ Case of
 		End if 
 		
 		
-		//If (FORM Get current page=5)
-		//LISTBOX SELECT ROW(*; "SalesLB3"; 1; lk replace selection)
-		//LISTBOX SELECT ROWS(*; "CustomersLB2"; Form.selectedSales.theCustomers; lk replace selection)
-		//End if 
+		If (FORM Get current page:C276=4)
+			Form:C1466.companies.currentValue:=""
+			Form:C1466.companies.index:=-1
+		End if 
 		
 End case 
 

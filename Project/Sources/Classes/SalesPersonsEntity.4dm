@@ -19,3 +19,25 @@ exposed Function get theCustomers($event : Object) : cs:C1710.CustomersSelection
 	
 	return $customers
 	
+	
+	//----------------------------------------------
+	// QODLY
+	//----------------------------------------------
+	
+	
+exposed Function associateSaledCompany($category : Text; $company : cs:C1710.CompaniesEntity)
+	
+	var $works : cs:C1710.WorkingSelection
+	
+	$works:=This:C1470.workings.query("company.name = :1 and category = :2"; $company.name; $category)
+	
+	If ($works.length=0)
+		$work:=ds:C1482.Working.new()
+		$work.salesPerson:=This:C1470
+		$work.category:=$category
+		$work.company:=$company
+		$status:=$work.save()
+		
+		//$status:=This.reload()
+		
+	End if 
