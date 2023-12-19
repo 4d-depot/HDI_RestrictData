@@ -16,15 +16,16 @@ Case of
 		Form:C1466.selectedSales:=Form:C1466.salesPersons.first()
 		
 		
-		$formula:=Formula:C1597(This:C1470.workings.length=2)
+		//$formula:=Formula(This.workings.length=2)
 		
-		$companies:=Form:C1466.selectedSales.companies.query($formula)
+		//$companies:=Form.selectedSales.companies.query($formula)
 		
-		Form:C1466.companies:={values: Form:C1466.ds.Companies.all().minus($companies).orderBy("name").name}
+		//Form.companies:={values: Form.ds.Companies.all().minus($companies).orderBy("name").name}
+		Form:C1466.companies:={values: Form:C1466.ds.Companies.all().name}
 		
 		
 		Use (Storage:C1525)
-			Storage:C1525.allCustomers:=Form:C1466.ds.Customers.all()
+			Storage:C1525.allCustomers:=Form:C1466.ds.Customers.all().toCollection().copy(ck shared:K85:29)
 		End use 
 		
 		Form:C1466.allCustomers:=Storage:C1525.allCustomers
@@ -47,16 +48,15 @@ Case of
 		
 		If (FORM Get current page:C276=3)
 			LISTBOX SELECT ROW:C912(*; "SalesLB2"; 1; lk replace selection:K53:1)
-			
 			Form:C1466.identifier:=Form:C1466.selectedSales.users.first().identifier
 			Form:C1466.password:="a"
 		End if 
 		
 		
-		If (FORM Get current page:C276=5)
-			LISTBOX SELECT ROW:C912(*; "SalesLB3"; 1; lk replace selection:K53:1)
-			LISTBOX SELECT ROWS:C1715(*; "CustomersLB2"; Form:C1466.selectedSales.theCustomers; lk replace selection:K53:1)
-		End if 
+		//If (FORM Get current page=5)
+		//LISTBOX SELECT ROW(*; "SalesLB3"; 1; lk replace selection)
+		//LISTBOX SELECT ROWS(*; "CustomersLB2"; Form.selectedSales.theCustomers; lk replace selection)
+		//End if 
 		
 End case 
 

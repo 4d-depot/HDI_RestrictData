@@ -1,7 +1,7 @@
 Class extends Entity
 
 
-exposed Alias companies workings.company
+//exposed Alias companies workings.company
 
 
 exposed Function get theCustomers($event : Object) : cs:C1710.CustomersSelection
