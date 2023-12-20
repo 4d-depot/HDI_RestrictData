@@ -145,31 +145,7 @@
 			"props": {
 				"iterable": true,
 				"classNames": [],
-				"events": [
-					{
-						"type": "method",
-						"dataclass": "DataStore",
-						"events": [
-							"onselect"
-						],
-						"id": "dju6nR3tMnCuD2EECffUc6",
-						"method": "ds.selectCompany",
-						"params": [
-							{
-								"name": "company",
-								"type": "cs.CompaniesEntity",
-								"datasource": "theCompany",
-								"id": "pAm6GEKY7D4oJzk7KQJ8UJ"
-							}
-						],
-						"datasource": "",
-						"returns": {
-							"name": "result",
-							"type": "cs.CompaniesEntity",
-							"datasource": "Sales:theSelectedCompany"
-						}
-					}
-				],
+				"events": [],
 				"template": "{{ length }} items",
 				"rowsNumber": 5,
 				"datasource": "companies",
@@ -253,6 +229,29 @@
 				"classNames": [],
 				"events": [
 					{
+						"type": "method",
+						"dataclass": "DataStore",
+						"events": [
+							"onclick"
+						],
+						"id": "uop3tJi8u5mFg9NbGwEb9g",
+						"method": "ds.selectCompany",
+						"params": [
+							{
+								"name": "company",
+								"type": "cs.CompaniesEntity",
+								"datasource": "theCompany",
+								"id": "pRUBG8f5h78jLDSEF29kB4"
+							}
+						],
+						"datasource": "",
+						"returns": {
+							"name": "result",
+							"type": "cs.CompaniesEntity",
+							"datasource": "Sales:theSelectedCompany"
+						}
+					},
+					{
 						"type": "navigation",
 						"id": "oKoNzMhZJdh3Hngc4cPYkY",
 						"events": [
@@ -286,7 +285,8 @@
 			"isCanvas": false,
 			"props": {
 				"classNames": [],
-				"events": []
+				"events": [],
+				"icon": "fa-star"
 			},
 			"displayName": "Icon",
 			"custom": {},

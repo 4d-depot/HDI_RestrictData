@@ -5,7 +5,7 @@ Class extends Entity
 // QODLY
 //----------------------------------------------
 
-exposed Function removeWorking()
+exposed Function removeMe()
 	
 	var $work : cs:C1710.WorkingEntity
 	

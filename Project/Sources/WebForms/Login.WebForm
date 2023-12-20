@@ -314,28 +314,38 @@
 						"events": [
 							"onclick"
 						],
-						"id": "8TyJq5drxdVT2U73XbUSEb",
+						"id": "cuNoJw77nhCXRCPvc5HMSt",
 						"method": "ds.webAuthenticate",
 						"params": [
 							{
 								"name": "identifier",
 								"type": "Text",
 								"datasource": "theUser.identifier",
-								"id": "dh5tah6ZjVtFH49e3xrXQr"
+								"id": "ivkan4q3gLgBH8cQiWBFkH"
 							},
 							{
 								"name": "password",
 								"type": "Text",
 								"datasource": "theUser.password",
-								"id": "bsGNg8FS5wdhzBJjfBnKtK"
+								"id": "kzVzBY4X3XbXxVFVYZ1TRi"
 							}
 						],
 						"datasource": "",
 						"returns": {
 							"name": "result",
-							"type": "Text",
-							"datasource": "Navigation:load"
+							"type": "Variable"
 						}
+					},
+					{
+						"type": "navigation",
+						"id": "dr5jk9nvKeMmwd6NpWzQGQ",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "",
+						"parent": "webform-loader-self",
+						"target": "SelectCompany"
 					}
 				],
 				"iconPosition": "hidden",

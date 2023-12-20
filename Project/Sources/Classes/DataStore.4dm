@@ -60,13 +60,12 @@ exposed Function clearSession()
 	
 	
 	
+	
 	//----------------------------------------------
 	// QODLY
 	//----------------------------------------------
 	
-	
-	
-exposed Function webAuthenticate($identifier : Text; $password : Text) : Text
+exposed Function webAuthenticate($identifier : Text; $password : Text)
 	
 	var $user : cs:C1710.UsersEntity
 	
@@ -82,11 +81,6 @@ exposed Function webAuthenticate($identifier : Text; $password : Text) : Text
 					Session:C1714.storage.info.salesPerson:=ds:C1482.SalesPersons.newSelection().add($user.salesPerson).copy(ck shared:K85:29)
 				End use 
 			End use 
-			return "SelectCompany"
-		Else 
-			return "Authentication failed: wrong password"
 		End if 
-	Else 
-		return "Authentication failed: wrong user"
 	End if 
 	
