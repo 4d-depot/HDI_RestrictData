@@ -46,15 +46,7 @@
 				"initialValue": "A"
 			}
 		],
-		"styles": [
-			{
-				"name": "blue-header-alternate-rows",
-				"content": "self {\n  border-radius: 10px;\n  box-shadow: 0 0 40px 0 rgb(0 0 0 / 15%);\n}\n\nself .header .header-cell {\n  background-color: #f97e66;\n  color: #fff;\n  font-weight: bold;\n  padding: 1.25rem 2rem;\n}\n\nself .row {\n  align-items: center;\n}\n\nself .row .cell {\n  padding: 0.5rem 2rem;\n}\n\nself .row .cell > span {\n  justify-content: flex-start;\n}\n\nself .row.selected {\n  align-items: center;\n}\nself .col-category {\n text-align: center;\n}\n\n\n\nself .header .resizable > :not([hidden]) ~ :not([hidden]),\nself .row > :not([hidden]) ~ :not([hidden]),\nself .Grid .innerScrollContainer,\nself .Grid .innerScrollContainer > :not([hidden]) ~ :not([hidden]) {\n  border-width: 0;\n}",
-				"parentId": null,
-				"id": "PL652ycE3f6pTdyAeRfgp",
-				"scope": "local"
-			}
-		]
+		"styles": []
 	},
 	"components": {
 		"ROOT": {
@@ -65,7 +57,11 @@
 			"props": {
 				"classNames": [],
 				"events": [],
-				"className": "bg-white h-full w-full px-6"
+				"className": "bg-white h-full w-full px-6",
+				"style": {
+					"backgroundColor": "#e5e6e7",
+					"color": "#5e5e5e"
+				}
 			},
 			"displayName": "Webform",
 			"custom": {},
@@ -168,7 +164,7 @@
 					"borderRadius": "15px",
 					"borderWidth": "1px",
 					"width": "550px",
-					"backgroundColor": "#dde0ee"
+					"backgroundColor": "#f2f2f2"
 				},
 				"datasource": "theSalesPerson.workings",
 				"gridProps": {
@@ -263,7 +259,8 @@
 				"datasource": "companies",
 				"currentElement": "theCompany",
 				"style": {
-					"width": "350px"
+					"width": "350px",
+					"borderWidth": "2px"
 				},
 				"placeholder": "Select a company"
 			},
@@ -680,7 +677,7 @@
 					}
 				],
 				"style": {
-					"backgroundColor": "#f97e66",
+					"backgroundColor": "#29db25ff",
 					"color": "#ffffffff",
 					"borderRadius": "50%",
 					"width": "50px",
@@ -833,9 +830,8 @@
 				],
 				"datasource": "",
 				"style": {
-					"color": "#66687d",
-					"fontWeight": "500",
-					"fontSize": "16px",
+					"fontWeight": "300",
+					"fontSize": "18px",
 					"width": "400px",
 					"paddingLeft": "10px"
 				}
@@ -889,9 +885,8 @@
 				],
 				"datasource": "",
 				"style": {
-					"color": "#66687d",
-					"fontWeight": "500",
-					"fontSize": "16px",
+					"fontWeight": "300",
+					"fontSize": "18px",
 					"width": "400px",
 					"paddingLeft": "10px"
 				}
@@ -944,7 +939,7 @@
 				"style": {
 					"width": "40px",
 					"height": "40px",
-					"backgroundColor": "#f97e66",
+					"backgroundColor": "#e73351ff",
 					"color": "#ffffffff",
 					"display": "flex",
 					"flexDirection": "row",
@@ -1019,9 +1014,8 @@
 				],
 				"datasource": "",
 				"style": {
-					"color": "#66687d",
 					"fontWeight": "500",
-					"fontSize": "20px"
+					"fontSize": "22px"
 				}
 			},
 			"displayName": "Text",
@@ -1081,9 +1075,8 @@
 				],
 				"datasource": "",
 				"style": {
-					"color": "#66687d",
-					"fontWeight": "500",
-					"fontSize": "16px",
+					"fontWeight": "300",
+					"fontSize": "18px",
 					"paddingLeft": "10px"
 				}
 			},

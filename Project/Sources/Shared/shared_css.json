@@ -1,0 +1,10 @@
+{
+	"classes": [
+		{
+			"name": "blue-header-alternate-rows",
+			"content": "self {\n  border-radius: 10px;\n  box-shadow: 0 0 40px 0 rgb(0 0 0 / 15%);\n\tbackground-color: #e6e6e6;\n}\n\nself .header .header-cell {\n  background-color: #f97e66;\n  color: #fff;\n  font-weight: bold;\n  padding: 1.25rem 2rem;\n}\n\nself .row {\n  align-items: center;\n}\n\nself .row .cell {\n  padding: 0.5rem 2rem;\n}\n\nself .row .cell > span {\n  justify-content: flex-start;\n}\n\nself .row.selected {\n  align-items: center;\n}\nself .col-category {\n text-align: center;\n}\n\nself .row-even:not(.selected):not(:hover) {\n  background-color: #f2f2f2;\n}\n\n\nself .header .resizable > :not([hidden]) ~ :not([hidden]),\nself .row > :not([hidden]) ~ :not([hidden]),\nself .Grid .innerScrollContainer,\nself .Grid .innerScrollContainer > :not([hidden]) ~ :not([hidden]) {\n  border-width: 0;\n}",
+			"parentId": null,
+			"id": "PL652ycE3f6pTdyAeRfgp"
+		}
+	]
+}

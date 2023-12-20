@@ -32,17 +32,18 @@
 				"classNames": [],
 				"events": [],
 				"airyMode": false,
-				"className": "bg-white h-full w-full px-6"
+				"className": "bg-white h-full w-full px-6",
+				"style": {
+					"backgroundColor": "#e5e6e7",
+					"color": "#5e5e5e"
+				}
 			},
 			"displayName": "Webform",
 			"custom": {},
 			"parent": "",
 			"hidden": false,
 			"nodes": [
-				"RQF2uAWcnA",
-				"iJixIQ4Hmo",
-				"b0A-uiXrrk",
-				"FUeXy9_jf_"
+				"24eURkZ5Os"
 			],
 			"linkedNodes": {}
 		},
@@ -67,30 +68,17 @@
 						]
 					}
 				],
-				"datasource": ""
+				"datasource": "",
+				"style": {
+					"fontWeight": "500",
+					"fontSize": "22px"
+				}
 			},
 			"displayName": "Text",
 			"custom": {},
-			"parent": "ROOT",
+			"parent": "abLH4Sse4O",
 			"hidden": false,
 			"nodes": [],
-			"linkedNodes": {}
-		},
-		"RQF2uAWcnA": {
-			"type": {
-				"resolvedName": "StyleBox"
-			},
-			"isCanvas": true,
-			"props": {
-				"events": []
-			},
-			"displayName": "Stylebox",
-			"custom": {},
-			"parent": "ROOT",
-			"hidden": false,
-			"nodes": [
-				"oIfoAh_BLX"
-			],
 			"linkedNodes": {}
 		},
 		"oIfoAh_BLX": {
@@ -112,11 +100,33 @@
 								"datasource": "Sales:theSelectedSales.firstname",
 								"children": [
 									{
-										"text": "Firstname",
+										"text": "firstname",
 										"bold": false,
 										"italic": false,
 										"underlined": false,
 										"strikethrough": false
+									}
+								],
+								"dsType": "string",
+								"format": ""
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " "
+							},
+							{
+								"type": "datasource",
+								"datasource": "Sales:theSelectedSales.lastname",
+								"children": [
+									{
+										"bold": false,
+										"italic": false,
+										"underlined": false,
+										"strikethrough": false,
+										"text": "lastname"
 									}
 								],
 								"dsType": "string",
@@ -128,11 +138,11 @@
 						]
 					}
 				],
-				"datasource": "Sales:theSelectedSales.firstname"
+				"datasource": "Sales:theSelectedSales.firstname,Sales:theSelectedSales.lastname"
 			},
 			"displayName": "Text",
 			"custom": {},
-			"parent": "RQF2uAWcnA",
+			"parent": "ZjmC_3lVEj",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
@@ -154,7 +164,7 @@
 			},
 			"displayName": "Select Box",
 			"custom": {},
-			"parent": "ROOT",
+			"parent": "abLH4Sse4O",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {
@@ -266,12 +276,14 @@
 				"iconPosition": "hidden",
 				"style": {
 					"display": "flex",
-					"marginTop": "300px"
+					"fontWeight": "500",
+					"fontSize": "20px",
+					"backgroundColor": "#f97e66"
 				}
 			},
 			"displayName": "Button",
 			"custom": {},
-			"parent": "ROOT",
+			"parent": "OaCAONYn5K",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {
@@ -293,6 +305,168 @@
 			"parent": "FUeXy9_jf_",
 			"hidden": false,
 			"nodes": [],
+			"linkedNodes": {}
+		},
+		"Lbd2DouqA2": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Connected sales person",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"fontWeight": "500",
+					"fontSize": "18px"
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "ZjmC_3lVEj",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"ZjmC_3lVEj": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"borderRadius": "15px",
+					"borderWidth": "1px",
+					"borderColor": "#5e5e5e",
+					"height": "80px",
+					"display": "flex",
+					"flexDirection": "row",
+					"alignItems": "center",
+					"justifyContent": "flex-start",
+					"gap": "20px"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "24eURkZ5Os",
+			"hidden": false,
+			"nodes": [
+				"Lbd2DouqA2",
+				"oIfoAh_BLX"
+			],
+			"linkedNodes": {}
+		},
+		"24eURkZ5Os": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"width": "50%",
+					"height": "80%",
+					"display": "flex",
+					"flexDirection": "column",
+					"justifyContent": "flex-start",
+					"alignItems": "start"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"ZjmC_3lVEj",
+				"MR_0ptA-Sn"
+			],
+			"linkedNodes": {}
+		},
+		"OaCAONYn5K": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"flexDirection": "row",
+					"alignItems": "center",
+					"justifyContent": "center"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "MR_0ptA-Sn",
+			"hidden": false,
+			"nodes": [
+				"FUeXy9_jf_"
+			],
+			"linkedNodes": {}
+		},
+		"MR_0ptA-Sn": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"flexDirection": "column",
+					"justifyContent": "space-between",
+					"alignItems": "start",
+					"height": "500px"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "24eURkZ5Os",
+			"hidden": false,
+			"nodes": [
+				"abLH4Sse4O",
+				"OaCAONYn5K"
+			],
+			"linkedNodes": {}
+		},
+		"abLH4Sse4O": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"flexDirection": "column",
+					"justifyContent": "center",
+					"alignItems": "start",
+					"gap": "20px"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "MR_0ptA-Sn",
+			"hidden": false,
+			"nodes": [
+				"iJixIQ4Hmo",
+				"b0A-uiXrrk"
+			],
 			"linkedNodes": {}
 		}
 	}

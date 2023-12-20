@@ -21,15 +21,7 @@
 				"depth": null
 			}
 		],
-		"styles": [
-			{
-				"name": "DisabledStyle",
-				"content": "self {\npointer-events: none;\nbackground-color: grey;\n}",
-				"parentId": null,
-				"scope": "local",
-				"id": "1pTwttp8tRBoUxSRbWkqu"
-			}
-		]
+		"styles": []
 	},
 	"components": {
 		"ROOT": {
@@ -41,14 +33,23 @@
 				"classNames": [],
 				"events": [],
 				"airyMode": false,
-				"className": "bg-white h-full w-full px-6"
+				"className": "bg-white h-full w-full px-6",
+				"style": {
+					"display": "flex",
+					"flexDirection": "column",
+					"justifyContent": "flex-start",
+					"alignItems": "start",
+					"color": "#5e5e5e",
+					"backgroundColor": "#e5e6e7"
+				}
 			},
 			"displayName": "Webform",
 			"custom": {},
 			"parent": "",
 			"hidden": false,
 			"nodes": [
-				"HxYT-RMQqS"
+				"afgaGq2Bfh",
+				"4xN6WoHT_H"
 			],
 			"linkedNodes": {}
 		},
@@ -59,7 +60,9 @@
 			"isCanvas": false,
 			"props": {
 				"iterable": true,
-				"classNames": [],
+				"classNames": [
+					"blue-header-alternate-rows"
+				],
 				"events": [
 					{
 						"type": "simple-action",
@@ -79,7 +82,9 @@
 						}
 					}
 				],
-				"style": {},
+				"style": {
+					"height": "140px"
+				},
 				"headerHeight": 36,
 				"rowHeight": 30,
 				"datasource": "users",
@@ -104,52 +109,19 @@
 						"title": "Identifier",
 						"source": "identifier",
 						"format": "",
-						"width": 150,
+						"width": "250px",
 						"sorting": false,
 						"dataType": "string",
 						"id": "uE84YT7vkCsQLm5N8A5K7U"
-					},
-					{
-						"title": "Password",
-						"source": "password",
-						"format": "",
-						"width": 150,
-						"sorting": false,
-						"dataType": "string",
-						"id": "r4zrrJJ4cq5AzdrW5qwZwB"
 					}
 				],
 				"currentElement": "theUser"
 			},
 			"displayName": "DataTable",
 			"custom": {},
-			"parent": "HxYT-RMQqS",
+			"parent": "4xN6WoHT_H",
 			"hidden": false,
 			"nodes": [],
-			"linkedNodes": {}
-		},
-		"HxYT-RMQqS": {
-			"type": {
-				"resolvedName": "StyleBox"
-			},
-			"isCanvas": true,
-			"props": {
-				"events": [],
-				"style": {
-					"display": "flex",
-					"flexDirection": "row",
-					"justifyContent": "flex-start",
-					"alignItems": "start"
-				}
-			},
-			"displayName": "Stylebox",
-			"custom": {},
-			"parent": "ROOT",
-			"hidden": false,
-			"nodes": [
-				"ohMpjtfB6Y",
-				"3YhTZigAHt"
-			],
 			"linkedNodes": {}
 		},
 		"3YhTZigAHt": {
@@ -158,145 +130,24 @@
 			},
 			"isCanvas": true,
 			"props": {
-				"events": []
+				"events": [],
+				"style": {
+					"display": "flex",
+					"flexDirection": "column",
+					"justifyContent": "center",
+					"alignItems": "start",
+					"gap": "20px",
+					"width": "auto"
+				}
 			},
 			"displayName": "Stylebox",
 			"custom": {},
-			"parent": "HxYT-RMQqS",
+			"parent": "4xN6WoHT_H",
 			"hidden": false,
 			"nodes": [
-				"nro8Tq8Y5f",
-				"O4f-JdFywD",
-				"cV-6OSCr4I"
+				"cgrmmg02uW",
+				"R2sEeD5Oxa"
 			],
-			"linkedNodes": {}
-		},
-		"nro8Tq8Y5f": {
-			"type": {
-				"resolvedName": "TextInput"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"placeholder": "placeholder",
-				"label": "label",
-				"labelPosition": "left"
-			},
-			"displayName": "Text Input",
-			"custom": {},
-			"parent": "3YhTZigAHt",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {
-				"label": "1i1zPgB9G2",
-				"input": "nsYkhln-PB"
-			}
-		},
-		"1i1zPgB9G2": {
-			"type": {
-				"resolvedName": "Label"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"moveable": false,
-				"text": "Identifier",
-				"deletable": true
-			},
-			"displayName": "Label",
-			"custom": {},
-			"parent": "nro8Tq8Y5f",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"nsYkhln-PB": {
-			"type": {
-				"resolvedName": "Input"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"deletable": false,
-				"className": "fd-input w-full bg-transparent",
-				"type": "text",
-				"datasource": "theUser.identifier",
-				"moveable": false,
-				"placeholder": "",
-				"readonly": false,
-				"classNames": [
-					"DisabledStyle"
-				]
-			},
-			"displayName": "Input",
-			"custom": {},
-			"parent": "nro8Tq8Y5f",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"O4f-JdFywD": {
-			"type": {
-				"resolvedName": "TextInput"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"placeholder": "placeholder",
-				"label": "label",
-				"labelPosition": "left"
-			},
-			"displayName": "Text Input",
-			"custom": {},
-			"parent": "3YhTZigAHt",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {
-				"label": "TfUjAmkI8U",
-				"input": "4K49rzBYhJ"
-			}
-		},
-		"TfUjAmkI8U": {
-			"type": {
-				"resolvedName": "Label"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"moveable": false,
-				"text": "Password",
-				"deletable": true
-			},
-			"displayName": "Label",
-			"custom": {},
-			"parent": "O4f-JdFywD",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"4K49rzBYhJ": {
-			"type": {
-				"resolvedName": "Input"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"deletable": false,
-				"className": "fd-input w-full bg-transparent",
-				"type": "text",
-				"datasource": "theUser.password",
-				"moveable": false,
-				"placeholder": "",
-				"readonly": false,
-				"classNames": [
-					"DisabledStyle"
-				]
-			},
-			"displayName": "Input",
-			"custom": {},
-			"parent": "O4f-JdFywD",
-			"hidden": false,
-			"nodes": [],
 			"linkedNodes": {}
 		},
 		"cV-6OSCr4I": {
@@ -350,12 +201,15 @@
 				],
 				"iconPosition": "hidden",
 				"style": {
-					"display": "flex"
+					"display": "flex",
+					"backgroundColor": "#f97e66",
+					"fontWeight": "500",
+					"fontSize": "20px"
 				}
 			},
 			"displayName": "Button",
 			"custom": {},
-			"parent": "3YhTZigAHt",
+			"parent": "R2sEeD5Oxa",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {
@@ -375,6 +229,235 @@
 			"displayName": "Icon",
 			"custom": {},
 			"parent": "cV-6OSCr4I",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"R2sEeD5Oxa": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"justifyContent": "center",
+					"alignItems": "center"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "3YhTZigAHt",
+			"hidden": false,
+			"nodes": [
+				"cV-6OSCr4I"
+			],
+			"linkedNodes": {}
+		},
+		"cgrmmg02uW": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"justifyContent": "center",
+					"alignItems": "start",
+					"gap": "10px",
+					"flexDirection": "column"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "3YhTZigAHt",
+			"hidden": false,
+			"nodes": [
+				"YrU1FSsim3",
+				"_cB4UVKuqi"
+			],
+			"linkedNodes": {}
+		},
+		"afgaGq2Bfh": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Select a sales person to authenticate as them",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"fontWeight": "500",
+					"fontSize": "22px",
+					"paddingLeft": "10px"
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"4xN6WoHT_H": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"justifyContent": "flex-start",
+					"alignItems": "start"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"ohMpjtfB6Y",
+				"3YhTZigAHt"
+			],
+			"linkedNodes": {}
+		},
+		"YrU1FSsim3": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"placeholder": "placeholder",
+				"label": "label",
+				"labelPosition": "left"
+			},
+			"displayName": "Text Input",
+			"custom": {},
+			"parent": "cgrmmg02uW",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "gC9wj2yYm-",
+				"input": "7pbOK2blpp"
+			}
+		},
+		"gC9wj2yYm-": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"moveable": false,
+				"text": "Identifier"
+			},
+			"displayName": "Label",
+			"custom": {},
+			"parent": "YrU1FSsim3",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"7pbOK2blpp": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"deletable": false,
+				"className": "fd-input w-full bg-transparent",
+				"type": "text",
+				"readOnly": true,
+				"style": {},
+				"datasource": "theUser.identifier"
+			},
+			"displayName": "Input",
+			"custom": {},
+			"parent": "YrU1FSsim3",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"_cB4UVKuqi": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"placeholder": "placeholder",
+				"label": "label",
+				"labelPosition": "left"
+			},
+			"displayName": "Text Input",
+			"custom": {},
+			"parent": "cgrmmg02uW",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "xFkdetgqrd",
+				"input": "AspOVdOVFa"
+			}
+		},
+		"xFkdetgqrd": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"moveable": false,
+				"text": "Password",
+				"deletable": true
+			},
+			"displayName": "Label",
+			"custom": {},
+			"parent": "_cB4UVKuqi",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"AspOVdOVFa": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"deletable": false,
+				"className": "fd-input w-full bg-transparent",
+				"type": "text",
+				"readOnly": true,
+				"style": {
+					"width": "400px"
+				},
+				"datasource": "theUser.password",
+				"moveable": false,
+				"placeholder": "",
+				"readonly": false
+			},
+			"displayName": "Input",
+			"custom": {},
+			"parent": "_cB4UVKuqi",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

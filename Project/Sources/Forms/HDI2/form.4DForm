@@ -34,10 +34,11 @@
 					"sizingY": "grow",
 					"dataSource": "objTabs",
 					"dataSourceTypeHint": "object",
-					"action": "gotoPage",
+					"action": "",
 					"events": [
 						"onClick"
-					]
+					],
+					"method": "ObjectMethods/Tab Control.4dm"
 				}
 			}
 		},
@@ -1130,6 +1131,29 @@
 					"borderStyle": "none"
 				}
 			}
+		},
+		{
+			"objects": {
+				"Input": {
+					"type": "input",
+					"left": 68,
+					"top": 144,
+					"width": 500,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Input.4dm",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "\"Click here to run the demo in Qodly studio\"",
+					"enterable": false,
+					"focusable": false,
+					"textDecoration": "underline",
+					"stroke": "#1e90ff",
+					"fontSize": 18
+				}
+			}
 		}
 	],
 	"$4d": {
@@ -1143,5 +1167,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 682
+	"geometryStamp": 692
 }
