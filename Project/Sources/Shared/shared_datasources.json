@@ -1,0 +1,29 @@
+{
+	"Navigation": [
+		{
+			"id": "load",
+			"type": "scalar",
+			"namespace": "Navigation",
+			"dataType": "string",
+			"initialValue": "Administration"
+		}
+	],
+	"Sales": [
+		{
+			"id": "theSelectedSales",
+			"type": "entity",
+			"dataclass": "SalesPersons",
+			"namespace": "Sales",
+			"initialValue": "",
+			"depth": null
+		},
+		{
+			"id": "theSelectedCompany",
+			"type": "entity",
+			"dataclass": "Companies",
+			"namespace": "Sales",
+			"initialValue": "",
+			"depth": null
+		}
+	]
+}

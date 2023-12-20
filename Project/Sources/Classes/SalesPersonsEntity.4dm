@@ -25,7 +25,7 @@ exposed Function get theCustomers($event : Object) : cs:C1710.CustomersSelection
 	//----------------------------------------------
 	
 	
-exposed Function associateSaledCompany($category : Text; $company : cs:C1710.CompaniesEntity)
+exposed Function associateSalesCompany($category : Text; $company : cs:C1710.CompaniesEntity)
 	
 	var $works : cs:C1710.WorkingSelection
 	
@@ -41,3 +41,6 @@ exposed Function associateSaledCompany($category : Text; $company : cs:C1710.Com
 		//$status:=This.reload()
 		
 	End if 
+	
+	
+	

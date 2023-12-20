@@ -5,11 +5,6 @@ Class extends DataStoreImplementation
 
 exposed Function authenticate($identifier : Text; $password : Text) : Text
 	
-	//exposed Function authenticate($params : Object) : Text
-	
-	//$identifier:=$params.identifier
-	//$password:=$params.password
-	
 	var $user : cs:C1710.UsersEntity
 	
 	
@@ -64,4 +59,34 @@ exposed Function clearSession()
 	End use 
 	
 	
+	
+	//----------------------------------------------
+	// QODLY
+	//----------------------------------------------
+	
+	
+	
+exposed Function webAuthenticate($identifier : Text; $password : Text) : Text
+	
+	var $user : cs:C1710.UsersEntity
+	
+	
+	$user:=ds:C1482.Users.query("identifier = :1"; $identifier).first()
+	
+	If ($user#Null:C1517)
+		If ($password=$user.password)
+			Session:C1714.clearPrivileges()
+			Use (Session:C1714.storage)
+				Session:C1714.storage.info:=New shared object:C1526()
+				Use (Session:C1714.storage.info)
+					Session:C1714.storage.info.salesPerson:=ds:C1482.SalesPersons.newSelection().add($user.salesPerson).copy(ck shared:K85:29)
+				End use 
+			End use 
+			return "SelectCompany"
+		Else 
+			return "Authentication failed: wrong password"
+		End if 
+	Else 
+		return "Authentication failed: wrong user"
+	End if 
 	
