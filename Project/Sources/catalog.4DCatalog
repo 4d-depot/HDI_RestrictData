@@ -28,9 +28,9 @@
 		<field name="name" uuid="5866879F6AD747B48658860EC7836C3A" type="10" limiting_length="255" never_null="true" id="2"/>
 		<primary_key field_name="ID" field_uuid="7956D5BB794D48E191AB221270BFB590"/>
 		<table_extra>
-			<editor_table_info displayable_fields_count="6">
+			<editor_table_info displayable_fields_count="2">
 				<color red="255" green="255" blue="255" alpha="0"/>
-				<coordinates left="493.69004821777" top="34.237518310547" width="120" height="167.33203125"/>
+				<coordinates left="422.69004821777" top="200.23751831055" width="103" height="102.33203125"/>
 			</editor_table_info>
 		</table_extra>
 	</table>
@@ -41,9 +41,9 @@
 		<field name="salesID" uuid="D37798257172471EA73AEFEFE5AC810C" type="4" never_null="true" id="4"/>
 		<primary_key field_name="ID" field_uuid="7703120AB7104A39A29E1C41E49F9AE2"/>
 		<table_extra>
-			<editor_table_info displayable_fields_count="6">
+			<editor_table_info displayable_fields_count="4">
 				<color red="255" green="255" blue="255" alpha="0"/>
-				<coordinates left="1074.9067077637" top="235.57693481445" width="179.65405273438" height="179.71929931641"/>
+				<coordinates left="997.9067077637" top="116" width="144.65405273438" height="139.71929931641"/>
 			</editor_table_info>
 		</table_extra>
 	</table>
@@ -53,9 +53,9 @@
 		<field name="lastname" uuid="74B8C79E1FEE44FD82E57553B3D98BC6" type="10" limiting_length="255" never_null="true" id="3"/>
 		<primary_key field_name="ID" field_uuid="123A623C7E9446C6B3E77FEDF4667237"/>
 		<table_extra>
-			<editor_table_info displayable_fields_count="6">
+			<editor_table_info displayable_fields_count="3">
 				<color red="255" green="255" blue="255" alpha="0"/>
-				<coordinates left="1005.1194152832" top="25.055816650391" width="141.93823242188" height="178.41870117188"/>
+				<coordinates left="811.1194152832" top="179.05581665039" width="117.93823242188" height="110.41870117188"/>
 			</editor_table_info>
 		</table_extra>
 	</table>
@@ -67,9 +67,9 @@
 		<field name="companyID" uuid="5D0336085C4C4312A1514C87388B9125" type="4" never_null="true" id="5"/>
 		<primary_key field_name="ID" field_uuid="BA45B4DAD8FC47419700B5D0C4A9B04C"/>
 		<table_extra>
-			<editor_table_info displayable_fields_count="6">
+			<editor_table_info displayable_fields_count="5">
 				<color red="255" green="255" blue="255" alpha="0"/>
-				<coordinates left="490.43627929688" top="241.06172180176" width="171" height="182.33203125"/>
+				<coordinates left="563.43627929688" top="300.06172180176" width="159" height="154.33203125"/>
 			</editor_table_info>
 		</table_extra>
 	</table>
@@ -80,9 +80,9 @@
 		<field name="category" uuid="4025DBB186DA4AC18B3EF1307E738457" type="10" limiting_length="255" never_null="true" id="4"/>
 		<primary_key field_name="ID" field_uuid="A6BF5462E54C4C8BA4709D4CD48D4D00"/>
 		<table_extra>
-			<editor_table_info displayable_fields_count="6">
+			<editor_table_info displayable_fields_count="4">
 				<color red="255" green="255" blue="255" alpha="0"/>
-				<coordinates left="723.88609313965" top="26.381637573242" width="159.13037109375" height="171.90567016602"/>
+				<coordinates left="593.88609313965" top="158" width="147.13037109375" height="128.90567016602"/>
 			</editor_table_info>
 		</table_extra>
 	</table>

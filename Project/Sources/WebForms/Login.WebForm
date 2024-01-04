@@ -196,7 +196,7 @@
 						"externalLink": false,
 						"loader": "",
 						"parent": "webform-loader-self",
-						"target": "SelectCompany"
+						"target": "ViewCustomers"
 					}
 				],
 				"iconPosition": "hidden",
@@ -367,7 +367,11 @@
 			"props": {
 				"events": [],
 				"moveable": false,
-				"text": "Identifier"
+				"text": "Identifier",
+				"deletable": true,
+				"style": {
+					"fontWeight": "700"
+				}
 			},
 			"displayName": "Label",
 			"custom": {},
@@ -388,7 +392,10 @@
 				"type": "text",
 				"readOnly": true,
 				"style": {},
-				"datasource": "theUser.identifier"
+				"datasource": "theUser.identifier",
+				"moveable": false,
+				"placeholder": "",
+				"readonly": false
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -427,7 +434,10 @@
 				"events": [],
 				"moveable": false,
 				"text": "Password",
-				"deletable": true
+				"deletable": true,
+				"style": {
+					"fontWeight": "700"
+				}
 			},
 			"displayName": "Label",
 			"custom": {},

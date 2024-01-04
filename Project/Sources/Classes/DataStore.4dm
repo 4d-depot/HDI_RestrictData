@@ -84,3 +84,10 @@ exposed Function webAuthenticate($identifier : Text; $password : Text)
 		End if 
 	End if 
 	
+	
+exposed Function hide($ref : Text)
+	Web Form:C1735[$ref].hide()
+	
+exposed Function show($ref : Text)
+	Web Form:C1735[$ref].show()
+	

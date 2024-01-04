@@ -1,0 +1,80 @@
+{
+	"metadata": {
+		"v": "1.0",
+		"datasources": [
+			{
+				"id": "customers",
+				"type": "entitysel",
+				"dataclass": "Customers",
+				"namespace": "",
+				"initialValue": "all",
+				"depth": null,
+				"pageSize": 100
+			}
+		],
+		"styles": []
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"airyMode": false,
+				"className": "bg-white h-full w-full px-6"
+			},
+			"displayName": "Webform",
+			"custom": {},
+			"parent": "",
+			"hidden": false,
+			"nodes": [
+				"yGwb5_J5ty"
+			],
+			"linkedNodes": {}
+		},
+		"yGwb5_J5ty": {
+			"type": {
+				"resolvedName": "DataTable"
+			},
+			"isCanvas": false,
+			"props": {
+				"iterable": true,
+				"classNames": [],
+				"events": [],
+				"style": {},
+				"headerHeight": 36,
+				"rowHeight": 30,
+				"columns": [
+					{
+						"title": "Firstname",
+						"source": "firstname",
+						"width": 150,
+						"sorting": false,
+						"id": "vjqjdcQkQgTWUfQd8UYGBj",
+						"format": "",
+						"dataType": "string"
+					},
+					{
+						"title": "Lastname",
+						"source": "lastname",
+						"width": 150,
+						"sorting": false,
+						"id": "sv2GuKTqKCUM2SCr1tKr3x",
+						"format": "",
+						"dataType": "string"
+					}
+				],
+				"datasource": "customers"
+			},
+			"displayName": "DataTable",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		}
+	}
+}
