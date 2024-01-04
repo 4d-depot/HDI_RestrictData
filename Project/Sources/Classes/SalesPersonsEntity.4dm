@@ -20,6 +20,10 @@ exposed Function get theCustomers($event : Object) : cs:C1710.CustomersSelection
 	return $customers
 	
 	
+exposed Function get fullName() : Text
+	return This:C1470.firstname+" "+This:C1470.lastname
+	
+	
 	//----------------------------------------------
 	// QODLY
 	//----------------------------------------------

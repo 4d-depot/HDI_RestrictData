@@ -4,6 +4,10 @@ Case of
 		
 		InitInfo
 		
+		InitLinesCode
+		
+		managesTexts
+		
 		Form:C1466.connect:={hostname: "127.0.0.1:8044"}
 		Form:C1466.ds:=Open datastore:C1452(Form:C1466.connect; "remoteDS")
 		
@@ -56,7 +60,13 @@ Case of
 		If (FORM Get current page:C276=4)
 			Form:C1466.companies.currentValue:=""
 			Form:C1466.companies.index:=-1
+			
+			OBJECT SET ENABLED:C1123(*; "AllCustomers"; False:C215)
+			OBJECT SET ENABLED:C1123(*; "ClearSession"; False:C215)
+			
 		End if 
+		
+		managesTexts
 		
 End case 
 

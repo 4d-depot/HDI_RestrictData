@@ -74,8 +74,8 @@
 					"type": "input",
 					"top": 73,
 					"left": 51,
-					"width": 393,
-					"height": 38,
+					"width": 1200,
+					"height": 100,
 					"sizingY": "grow",
 					"dataSource": "Infos[1].Description",
 					"focusable": false,
@@ -94,7 +94,7 @@
 				"SalesLB": {
 					"type": "listbox",
 					"left": 31,
-					"top": 237,
+					"top": 277,
 					"width": 255,
 					"height": 81,
 					"events": [
@@ -141,8 +141,8 @@
 				"Button3": {
 					"type": "button",
 					"text": "Add",
-					"top": 247,
-					"left": 752,
+					"top": 287,
+					"left": 852,
 					"width": 80,
 					"height": 35,
 					"events": [
@@ -156,8 +156,8 @@
 				},
 				"SalesPersonsProvidersLB": {
 					"type": "listbox",
-					"left": 879,
-					"top": 227,
+					"left": 979,
+					"top": 267,
 					"width": 335,
 					"height": 157,
 					"events": [
@@ -206,8 +206,8 @@
 				},
 				"Text": {
 					"type": "text",
-					"text": "Associate a sales person to a company + a category of customers",
-					"top": 187,
+					"text": "Select a sales person and associate them to a company + a category of customers",
+					"top": 227,
 					"left": 79,
 					"width": 600,
 					"height": 16,
@@ -217,28 +217,29 @@
 				"Text1": {
 					"type": "text",
 					"text": "Select a company to manage",
-					"top": 227,
-					"left": 300,
+					"top": 267,
+					"left": 306,
 					"width": 250,
 					"height": 16
 				},
 				"Popup Dropdown List2": {
 					"type": "dropdown",
 					"left": 306,
-					"top": 249,
-					"width": 101,
+					"top": 289,
+					"width": 250,
 					"height": 33,
 					"events": [
 						"onDataChange"
 					],
 					"dataSource": "Form:C1466.companies",
 					"dataSourceTypeHint": "object",
-					"method": "ObjectMethods/Popup Dropdown List2.4dm"
+					"method": "ObjectMethods/Popup Dropdown List2.4dm",
+					"focusable": false
 				},
 				"CustomersLB": {
 					"type": "listbox",
 					"left": 38,
-					"top": 384,
+					"top": 464,
 					"width": 535,
 					"height": 221,
 					"events": [
@@ -313,17 +314,17 @@
 				"Text2": {
 					"type": "text",
 					"text": "Customer category to manage",
-					"top": 227,
-					"left": 493,
+					"top": 267,
+					"left": 573,
 					"width": 250,
 					"height": 16
 				},
 				"Text3": {
 					"type": "text",
-					"text": "View here the customers managed by the selected sales person",
-					"top": 357,
+					"text": "Customers list: the customers managed by the selected sales person are highlighted here",
+					"top": 437,
 					"left": 79,
-					"width": 450,
+					"width": 600,
 					"height": 16,
 					"stroke": "#800080",
 					"fontWeight": "bold"
@@ -331,7 +332,7 @@
 				"Text4": {
 					"type": "text",
 					"text": "Sales person list",
-					"top": 215,
+					"top": 255,
 					"left": 31,
 					"width": 140,
 					"height": 16,
@@ -341,8 +342,8 @@
 				"Button5": {
 					"type": "button",
 					"text": "Remove this company",
-					"top": 389,
-					"left": 1009,
+					"top": 429,
+					"left": 1109,
 					"width": 200,
 					"height": 35,
 					"events": [
@@ -357,18 +358,18 @@
 				},
 				"Text5": {
 					"type": "text",
-					"text": "Managed companies",
-					"top": 206,
-					"left": 879,
-					"width": 149,
+					"text": "Managed companies for the selected sales person",
+					"top": 246,
+					"left": 979,
+					"width": 400,
 					"height": 16,
 					"fontWeight": "bold"
 				},
 				"Radio Button": {
 					"type": "radio",
 					"text": "A",
-					"top": 247,
-					"left": 499,
+					"top": 287,
+					"left": 579,
 					"width": 70,
 					"height": 20,
 					"events": [
@@ -381,8 +382,8 @@
 				"Radio Button1": {
 					"type": "radio",
 					"text": "B",
-					"top": 247,
-					"left": 570,
+					"top": 287,
+					"left": 650,
 					"width": 70,
 					"height": 20,
 					"events": [
@@ -395,7 +396,7 @@
 				"Text6": {
 					"type": "text",
 					"text": "1",
-					"top": 183,
+					"top": 223,
 					"left": 38,
 					"width": 30,
 					"height": 20,
@@ -408,7 +409,7 @@
 				"Text7": {
 					"type": "text",
 					"text": "2",
-					"top": 357,
+					"top": 437,
 					"left": 43,
 					"width": 30,
 					"height": 20,
@@ -441,10 +442,10 @@
 					"type": "input",
 					"top": 73,
 					"left": 51,
-					"width": 393,
-					"height": 38,
+					"width": 800,
+					"height": 80,
 					"sizingY": "grow",
-					"dataSource": "Infos[2].Description",
+					"dataSource": "otherInfos[0].Description",
 					"focusable": false,
 					"fill": "transparent",
 					"borderStyle": "none",
@@ -477,7 +478,8 @@
 					"top": 237,
 					"width": 261,
 					"height": 20,
-					"dataSource": "Form:C1466.identifier"
+					"dataSource": "Form:C1466.identifier",
+					"hideFocusRing": true
 				},
 				"Input4": {
 					"type": "input",
@@ -485,7 +487,8 @@
 					"top": 277,
 					"width": 288,
 					"height": 20,
-					"dataSource": "Form:C1466.password"
+					"dataSource": "Form:C1466.password",
+					"hideFocusRing": true
 				},
 				"SalesLB2": {
 					"type": "listbox",
@@ -581,6 +584,21 @@
 					"fontSize": 14,
 					"stroke": "automatic",
 					"focusable": false
+				},
+				"Error": {
+					"type": "input",
+					"left": 55,
+					"top": 409,
+					"width": 600,
+					"height": 30,
+					"dataSource": "Form:C1466.result",
+					"enterable": false,
+					"focusable": false,
+					"visibility": "hidden",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"fontWeight": "bold",
+					"stroke": "#dc143c"
 				}
 			}
 		},
@@ -609,8 +627,8 @@
 				},
 				"Popup Dropdown List1": {
 					"type": "dropdown",
-					"left": 714,
-					"top": 269,
+					"left": 585,
+					"top": 152,
 					"width": 215,
 					"height": 30,
 					"events": [
@@ -618,71 +636,50 @@
 					],
 					"dataSource": "Form:C1466.companies",
 					"dataSourceTypeHint": "object",
-					"method": "ObjectMethods/Popup Dropdown List1.4dm"
-				},
-				"Rectangle1": {
-					"type": "rectangle",
-					"top": 146,
-					"left": 100,
-					"width": 874,
-					"height": 50,
-					"fill": "transparent",
-					"strokeDashArray": [
-						6,
-						2
-					],
-					"stroke": "#800080",
-					"strokeWidth": 0
+					"method": "ObjectMethods/Popup Dropdown List1.4dm",
+					"focusable": false
 				},
 				"Input2": {
 					"type": "input",
-					"left": 199,
+					"left": 119,
 					"top": 157,
 					"width": 255,
 					"height": 20,
-					"dataSource": "Form:C1466.salesPerson.firstname",
+					"dataSource": "Form:C1466.salesPerson.fullName",
 					"enterable": false,
 					"fill": "transparent",
 					"borderStyle": "none",
-					"fontWeight": "bold"
-				},
-				"Input6": {
-					"type": "input",
-					"left": 389,
-					"top": 157,
-					"width": 255,
-					"height": 20,
-					"dataSource": "Form:C1466.salesPerson.lastname",
-					"enterable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"fontWeight": "bold"
+					"fontWeight": "bold",
+					"focusable": false,
+					"textAlign": "left"
 				},
 				"Text10": {
 					"type": "text",
 					"text": "You are:",
 					"top": 157,
-					"left": 119,
+					"left": -1,
 					"width": 100,
 					"height": 20,
 					"stroke": "#800080",
-					"fontWeight": "bold"
+					"fontWeight": "bold",
+					"textAlign": "right"
 				},
 				"Text11": {
 					"type": "text",
 					"text": "Select a company to work with",
-					"top": 233,
-					"left": 714,
-					"width": 450,
+					"top": 157,
+					"left": 315,
+					"width": 250,
 					"height": 16,
 					"stroke": "#800080",
-					"fontWeight": "bold"
+					"fontWeight": "bold",
+					"textAlign": "right"
 				},
 				"Button8": {
 					"type": "button",
 					"text": "Previous",
-					"top": 646,
-					"left": 1243,
+					"top": 658,
+					"left": 1277,
 					"width": 80,
 					"height": 35,
 					"events": [
@@ -696,10 +693,10 @@
 				},
 				"Rectangle4": {
 					"type": "rectangle",
-					"top": 240,
-					"left": 40,
-					"width": 643,
-					"height": 449,
+					"top": 209,
+					"left": 38,
+					"width": 580,
+					"height": 380,
 					"fill": "transparent",
 					"strokeDashArray": [
 						6,
@@ -710,8 +707,8 @@
 				},
 				"CustomersLB1": {
 					"type": "listbox",
-					"left": 51,
-					"top": 366,
+					"left": 49,
+					"top": 335,
 					"width": 535,
 					"height": 221,
 					"events": [],
@@ -781,9 +778,9 @@
 				"Text9": {
 					"type": "text",
 					"text": "AID TO MEMORY",
-					"top": 271,
-					"left": 56,
-					"width": 450,
+					"top": 220,
+					"left": 38,
+					"width": 630,
 					"height": 16,
 					"stroke": "#800080",
 					"fontWeight": "bold",
@@ -792,57 +789,30 @@
 				"Text12": {
 					"type": "text",
 					"text": "View here all the customers managed by ",
-					"top": 317,
-					"left": 51,
+					"top": 286,
+					"left": -11,
 					"width": 300,
 					"height": 16,
 					"stroke": "automatic",
-					"fontWeight": "normal"
+					"fontWeight": "normal",
+					"textAlign": "right"
 				},
 				"Input7": {
 					"type": "input",
-					"left": 315,
-					"top": 317,
+					"left": 313,
+					"top": 286,
 					"width": 255,
 					"height": 20,
-					"dataSource": "Form:C1466.salesPerson.firstname",
+					"dataSource": "Form:C1466.salesPerson.fullName",
 					"enterable": false,
 					"fill": "transparent",
-					"borderStyle": "none"
-				},
-				"Input11": {
-					"type": "input",
-					"left": 485,
-					"top": 317,
-					"width": 255,
-					"height": 20,
-					"dataSource": "Form:C1466.salesPerson.lastname",
-					"enterable": false,
-					"fill": "transparent",
-					"borderStyle": "none"
-				}
-			}
-		},
-		{
-			"objects": {
-				"Rectangle2": {
-					"type": "rectangle",
-					"top": 251,
-					"left": 31,
-					"width": 643,
-					"height": 449,
-					"fill": "transparent",
-					"strokeDashArray": [
-						6,
-						2
-					],
-					"stroke": "#800080",
-					"strokeWidth": 0
+					"borderStyle": "none",
+					"fontWeight": "bold"
 				},
 				"List Box1": {
 					"type": "listbox",
-					"left": 689,
-					"top": 404,
+					"left": 666,
+					"top": 324,
 					"width": 682,
 					"height": 201,
 					"events": [
@@ -906,6 +876,74 @@
 							}
 						}
 					]
+				},
+				"AllCustomers": {
+					"type": "button",
+					"text": "Get all customers",
+					"top": 220,
+					"left": 666,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/AllCustomers.4dm"
+				},
+				"ClearSession": {
+					"type": "button",
+					"text": "Clear session",
+					"top": 276,
+					"left": 666,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ClearSession.4dm"
+				},
+				"Input6": {
+					"type": "input",
+					"left": 836,
+					"top": 220,
+					"width": 450,
+					"height": 30,
+					"dataSource": "linesCode[0].Description",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"styledText": true
+				},
+				"Input11": {
+					"type": "input",
+					"left": 836,
+					"top": 272,
+					"width": 450,
+					"height": 30,
+					"dataSource": "linesCode[1].Description",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"styledText": true
+				}
+			}
+		},
+		{
+			"objects": {
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 251,
+					"left": 31,
+					"width": 643,
+					"height": 449,
+					"fill": "transparent",
+					"strokeDashArray": [
+						6,
+						2
+					],
+					"stroke": "#800080",
+					"strokeWidth": 0
 				},
 				"CustomersLB2": {
 					"type": "listbox",
@@ -997,30 +1035,6 @@
 					"height": 16,
 					"stroke": "automatic",
 					"fontWeight": "normal"
-				},
-				"Button2": {
-					"type": "button",
-					"text": "Get all customers",
-					"top": 376,
-					"left": 689,
-					"width": 150,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button2.4dm"
-				},
-				"Button6": {
-					"type": "button",
-					"text": "Clear session",
-					"top": 376,
-					"left": 859,
-					"width": 150,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button6.4dm"
 				},
 				"Rectangle3": {
 					"type": "rectangle",
@@ -1167,5 +1181,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 692
+	"geometryStamp": 852
 }
