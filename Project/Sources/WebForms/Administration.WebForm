@@ -68,7 +68,6 @@
 			"parent": "",
 			"hidden": false,
 			"nodes": [
-				"Q8kwifKSVy",
 				"I4GHwdUbhF",
 				"MG5PEwqTXB",
 				"KyvcY14W61"
@@ -133,8 +132,6 @@
 					"flexDirection": "row",
 					"alignItems": "start",
 					"justifyContent": "flex-start",
-					"borderColor": "#3b82f6ff",
-					"borderWidth": "1px",
 					"width": "auto"
 				}
 			},
@@ -163,15 +160,15 @@
 					"height": "300px",
 					"borderRadius": "15px",
 					"borderWidth": "1px",
-					"width": "550px",
+					"width": "430px",
 					"backgroundColor": "#f2f2f2"
 				},
 				"datasource": "theSalesPerson.workings",
 				"gridProps": {
-					"styleboxWidth": 1,
+					"styleboxWidth": 548,
 					"styleboxHeight": 60,
-					"styleboxPercentWidth": "100%",
-					"enableMosaic": true
+					"styleboxPercentWidth": "",
+					"enableMosaic": false
 				},
 				"currentElement": ""
 			},
@@ -288,7 +285,8 @@
 					"justifyContent": "flex-start",
 					"height": "60px",
 					"paddingLeft": "20px",
-					"paddingTop": "20px"
+					"paddingTop": "20px",
+					"width": "auto"
 				}
 			},
 			"displayName": "Stylebox",
@@ -477,7 +475,12 @@
 						"id": "2bC7qrwMPab6HDCZNuQLsj"
 					}
 				],
-				"datasource": "category"
+				"datasource": "category",
+				"style": {
+					"display": "flex",
+					"justifyContent": "flex-start",
+					"alignItems": "center"
+				}
 			},
 			"displayName": "Radio",
 			"custom": {},
@@ -537,62 +540,6 @@
 			"displayName": "Icon",
 			"custom": {},
 			"parent": "UOOawHxLFm",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"Q8kwifKSVy": {
-			"type": {
-				"resolvedName": "Button"
-			},
-			"isCanvas": false,
-			"props": {
-				"text": "Clear session",
-				"classNames": [],
-				"events": [
-					{
-						"type": "method",
-						"dataclass": "DataStore",
-						"events": [
-							"onclick"
-						],
-						"id": "47CkTybRnFPhogdnvSRqyu",
-						"method": "ds.clearSession",
-						"params": [],
-						"datasource": "",
-						"returns": {
-							"name": "result",
-							"type": "Variable"
-						}
-					}
-				],
-				"iconPosition": "hidden",
-				"style": {
-					"display": "flex"
-				}
-			},
-			"displayName": "Button",
-			"custom": {},
-			"parent": "ROOT",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {
-				"icon": "-K5lzsGUsQ"
-			}
-		},
-		"-K5lzsGUsQ": {
-			"type": {
-				"resolvedName": "Icon"
-			},
-			"isCanvas": false,
-			"props": {
-				"classNames": [],
-				"events": [],
-				"icon": "fa-star"
-			},
-			"displayName": "Icon",
-			"custom": {},
-			"parent": "Q8kwifKSVy",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
@@ -830,7 +777,7 @@
 				],
 				"datasource": "",
 				"style": {
-					"fontWeight": "300",
+					"fontWeight": "500",
 					"fontSize": "18px",
 					"width": "400px",
 					"paddingLeft": "10px"
@@ -885,7 +832,7 @@
 				],
 				"datasource": "",
 				"style": {
-					"fontWeight": "300",
+					"fontWeight": "500",
 					"fontSize": "18px",
 					"width": "400px",
 					"paddingLeft": "10px"
@@ -1003,7 +950,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Associate a sales person to a company + category of customers",
+								"text": "1- Associate a sales person to a company + category of customers",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -1037,9 +984,7 @@
 					"flexDirection": "row",
 					"alignItems": "end",
 					"justifyContent": "flex-start",
-					"width": "auto",
-					"borderColor": "#3b82f6ff",
-					"borderWidth": "1px"
+					"width": "auto"
 				}
 			},
 			"displayName": "Stylebox",
@@ -1064,18 +1009,40 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "View here the customers managed by the selected sales person",
+								"text": "View here the customers managed by the selected sales person (",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false
+							},
+							{
+								"type": "datasource",
+								"datasource": "theSalesPerson.fullName",
+								"children": [
+									{
+										"bold": false,
+										"italic": false,
+										"underlined": false,
+										"strikethrough": false,
+										"text": "fullName"
+									}
+								],
+								"dsType": "string",
+								"format": ""
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ")"
 							}
 						]
 					}
 				],
-				"datasource": "",
+				"datasource": "theSalesPerson.fullName",
 				"style": {
-					"fontWeight": "300",
+					"fontWeight": "500",
 					"fontSize": "18px",
 					"paddingLeft": "10px"
 				}

@@ -19,6 +19,13 @@
 				"namespace": "",
 				"initialValue": "first",
 				"depth": null
+			},
+			{
+				"id": "pasword",
+				"type": "scalar",
+				"namespace": "",
+				"dataType": "string",
+				"initialValue": "a"
 			}
 		],
 		"styles": []
@@ -292,7 +299,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Select a sales person to authenticate as them",
+								"text": "2- Select a sales person to authenticate as them",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -460,10 +467,11 @@
 				"style": {
 					"width": "400px"
 				},
-				"datasource": "theUser.password",
+				"datasource": "pasword",
 				"moveable": false,
 				"placeholder": "",
-				"readonly": false
+				"readonly": false,
+				"dataType": "string"
 			},
 			"displayName": "Input",
 			"custom": {},

@@ -86,8 +86,10 @@ exposed Function webAuthenticate($identifier : Text; $password : Text)
 	
 	
 exposed Function hide($ref : Text)
-	Web Form:C1735[$ref].hide()
+	Web Form:C1735[$ref].removeCSSClass("showItem")
+	Web Form:C1735[$ref].addCSSClass("hideItem")
 	
 exposed Function show($ref : Text)
-	Web Form:C1735[$ref].show()
+	Web Form:C1735[$ref].removeCSSClass("hideItem")
+	Web Form:C1735[$ref].addCSSClass("showItem")
 	
