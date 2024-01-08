@@ -21,7 +21,7 @@
 				"depth": null
 			},
 			{
-				"id": "pasword",
+				"id": "password",
 				"type": "scalar",
 				"namespace": "",
 				"dataType": "string",
@@ -172,26 +172,26 @@
 						"events": [
 							"onclick"
 						],
-						"id": "cuNoJw77nhCXRCPvc5HMSt",
-						"method": "ds.webAuthenticate",
+						"id": "28aufYnj7DWHmRWSKYzMS9",
+						"method": "ds.authenticate",
 						"params": [
 							{
 								"name": "identifier",
 								"type": "Text",
 								"datasource": "theUser.identifier",
-								"id": "ivkan4q3gLgBH8cQiWBFkH"
+								"id": "o741orSVekFfmsFMhcTWdy"
 							},
 							{
 								"name": "password",
 								"type": "Text",
-								"datasource": "theUser.password",
-								"id": "kzVzBY4X3XbXxVFVYZ1TRi"
+								"datasource": "password",
+								"id": "xnAwiZyyJP2QXYbRNSoi2f"
 							}
 						],
 						"datasource": "",
 						"returns": {
 							"name": "result",
-							"type": "Variable"
+							"type": "Text"
 						}
 					},
 					{
@@ -467,7 +467,7 @@
 				"style": {
 					"width": "400px"
 				},
-				"datasource": "pasword",
+				"datasource": "password",
 				"moveable": false,
 				"placeholder": "",
 				"readonly": false,

@@ -159,6 +159,11 @@
 			<table_ref uuid="DD9AC9A4550240DEB6781FD109C72453" name="SalesPersons"/>
 		</field_ref>
 	</index>
+	<index kind="regular" uuid="62644459243C4BE186536D3E02844B43" type="7">
+		<field_ref uuid="B7CE9B7849ED4D27B2B65BB62331D50F" name="category">
+			<table_ref uuid="86FC544ADD3548928B2CDDF3424EEFB5" name="Customers"/>
+		</field_ref>
+	</index>
 	<index kind="regular" unique_keys="true" uuid="7AEF5C8460D6450885C60398E9651E59" type="7">
 		<field_ref uuid="7956D5BB794D48E191AB221270BFB590" name="ID">
 			<table_ref uuid="3D87F0AD651D4BAA99AFA5C77E682BA9" name="Companies"/>

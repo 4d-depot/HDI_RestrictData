@@ -65,24 +65,24 @@ exposed Function clearSession()
 	// QODLY
 	//----------------------------------------------
 	
-exposed Function webAuthenticate($identifier : Text; $password : Text)
+	//exposed Function webAuthenticate($identifier : Text; $password : Text)
 	
-	var $user : cs:C1710.UsersEntity
+	//var $user : cs.UsersEntity
 	
 	
-	$user:=ds:C1482.Users.query("identifier = :1"; $identifier).first()
+	//$user:=ds.Users.query("identifier = :1"; $identifier).first()
 	
-	If ($user#Null:C1517)
-		If ($password=$user.password)
-			Session:C1714.clearPrivileges()
-			Use (Session:C1714.storage)
-				Session:C1714.storage.info:=New shared object:C1526()
-				Use (Session:C1714.storage.info)
-					Session:C1714.storage.info.salesPerson:=ds:C1482.SalesPersons.newSelection().add($user.salesPerson).copy(ck shared:K85:29)
-				End use 
-			End use 
-		End if 
-	End if 
+	//If ($user#Null)
+	//If ($password=$user.password)
+	//Session.clearPrivileges()
+	//Use (Session.storage)
+	//Session.storage.info:=New shared object()
+	//Use (Session.storage.info)
+	//Session.storage.info.salesPerson:=ds.SalesPersons.newSelection().add($user.salesPerson).copy(ck shared)
+	//End use 
+	//End use 
+	//End if 
+	//End if 
 	
 	
 exposed Function hide($ref : Text)
