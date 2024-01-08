@@ -155,7 +155,9 @@
 				"className": "bg-white h-full w-full px-6",
 				"style": {
 					"color": "#5e5e5e",
-					"backgroundColor": "#e5e6e7"
+					"backgroundColor": "#e5e6e7",
+					"paddingLeft": "0px",
+					"borderRadius": "15px"
 				}
 			},
 			"displayName": "Webform",
@@ -219,7 +221,7 @@
 						"title": "Firstname",
 						"source": "firstname",
 						"format": "",
-						"width": "200px",
+						"width": "150px",
 						"sorting": false,
 						"id": "mgtYWtdnBhhnvVSMY2ZUmL"
 					},
@@ -227,7 +229,7 @@
 						"title": "Lastname",
 						"source": "lastname",
 						"format": "",
-						"width": "200px",
+						"width": "150px",
 						"sorting": false,
 						"id": "ec7TEA85EJqLKQptVanaNV"
 					},
@@ -235,7 +237,7 @@
 						"title": "Category",
 						"source": "category",
 						"format": "",
-						"width": 150,
+						"width": "150px",
 						"sorting": false,
 						"dataType": "string",
 						"id": "uivfoBiX7S3A5Yi85AfCQt"
@@ -244,7 +246,7 @@
 						"title": "Company",
 						"source": "company.name",
 						"format": "",
-						"width": "350px",
+						"width": "300px",
 						"sorting": false,
 						"id": "iYxDbiTpM1yvpAaXZdZYKR"
 					}
@@ -280,7 +282,7 @@
 						"title": "Firstname",
 						"source": "firstname",
 						"format": "",
-						"width": "200px",
+						"width": "150px",
 						"sorting": false,
 						"id": "mgtYWtdnBhhnvVSMY2ZUmL"
 					},
@@ -288,7 +290,7 @@
 						"title": "Lastname",
 						"source": "lastname",
 						"format": "",
-						"width": "200px",
+						"width": "150px",
 						"sorting": false,
 						"id": "ec7TEA85EJqLKQptVanaNV"
 					},
@@ -983,7 +985,8 @@
 				"style": {
 					"display": "flex",
 					"justifyContent": "flex-start",
-					"alignItems": "center"
+					"alignItems": "center",
+					"top": "-60px"
 				},
 				"serverSideRef": "NoSalesPerson",
 				"classNames": []

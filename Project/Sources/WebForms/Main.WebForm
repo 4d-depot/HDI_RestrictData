@@ -22,7 +22,11 @@
 				"classNames": [],
 				"events": [],
 				"airyMode": false,
-				"className": "bg-white h-full w-full px-6"
+				"className": "bg-white h-full w-full px-6",
+				"style": {
+					"paddingLeft": "0px",
+					"height": "auto"
+				}
 			},
 			"displayName": "Webform",
 			"custom": {},
@@ -41,7 +45,11 @@
 			"props": {
 				"events": [],
 				"datasource": "load",
-				"webform": "Administration"
+				"webform": "Administration",
+				"style": {
+					"width": "1600px",
+					"height": "860px"
+				}
 			},
 			"displayName": "Webform Loader",
 			"custom": {},

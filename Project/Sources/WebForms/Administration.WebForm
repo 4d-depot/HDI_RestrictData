@@ -60,7 +60,9 @@
 				"className": "bg-white h-full w-full px-6",
 				"style": {
 					"backgroundColor": "#e5e6e7",
-					"color": "#5e5e5e"
+					"color": "#5e5e5e",
+					"paddingLeft": "0px",
+					"borderRadius": "15px"
 				}
 			},
 			"displayName": "Webform",
@@ -132,7 +134,8 @@
 					"flexDirection": "row",
 					"alignItems": "start",
 					"justifyContent": "flex-start",
-					"width": "auto"
+					"width": "auto",
+					"marginTop": "10px"
 				}
 			},
 			"displayName": "Stylebox",
@@ -165,7 +168,7 @@
 				},
 				"datasource": "theSalesPerson.workings",
 				"gridProps": {
-					"styleboxWidth": 548,
+					"styleboxWidth": 428,
 					"styleboxHeight": 60,
 					"styleboxPercentWidth": "",
 					"enableMosaic": false
@@ -194,7 +197,7 @@
 				"events": [],
 				"loopable": true,
 				"style": {
-					"height": "350px"
+					"height": "290px"
 				},
 				"headerHeight": 50,
 				"rowHeight": 30,
@@ -204,7 +207,7 @@
 						"title": "Firstname",
 						"source": "firstname",
 						"format": "",
-						"width": "200px",
+						"width": "150px",
 						"sorting": false,
 						"id": "mgtYWtdnBhhnvVSMY2ZUmL"
 					},
@@ -212,7 +215,7 @@
 						"title": "Lastname",
 						"source": "lastname",
 						"format": "",
-						"width": "200px",
+						"width": "150px",
 						"sorting": false,
 						"id": "ec7TEA85EJqLKQptVanaNV"
 					},
@@ -229,7 +232,7 @@
 						"title": "Company",
 						"source": "company.name",
 						"format": "",
-						"width": "350px",
+						"width": "300px",
 						"sorting": false,
 						"id": "iYxDbiTpM1yvpAaXZdZYKR"
 					}
@@ -962,7 +965,8 @@
 				"datasource": "",
 				"style": {
 					"fontWeight": "500",
-					"fontSize": "22px"
+					"fontSize": "22px",
+					"marginLeft": "10px"
 				}
 			},
 			"displayName": "Text",
