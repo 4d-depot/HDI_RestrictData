@@ -762,8 +762,8 @@
 						"datasource": "",
 						"returns": {
 							"name": "result",
-							"type": "cs.CompaniesEntity",
-							"datasource": "theCompany"
+							"type": "Variable",
+							"datasource": ""
 						}
 					},
 					{

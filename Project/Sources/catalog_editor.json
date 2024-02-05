@@ -2,96 +2,96 @@
 	"tables": {
 		"Working": {
 			"color": {
-				"alpha": "0",
-				"blue": "255",
+				"red": "255",
 				"green": "255",
-				"red": "255"
+				"blue": "255",
+				"alpha": "0"
 			},
 			"coordinates": {
-				"height": "128.90567016602",
-				"width": "147.13037109375",
+				"left": "593.88609313965",
 				"top": "158",
-				"left": "593.88609313965"
+				"width": "147.13037109375",
+				"height": "128.90567016602"
 			},
 			"displayable_fields_count": 4,
 			"fields_ordering": 1
 		},
 		"Customers": {
 			"color": {
-				"alpha": "0",
-				"blue": "255",
+				"red": "255",
 				"green": "255",
-				"red": "255"
+				"blue": "255",
+				"alpha": "0"
 			},
 			"coordinates": {
-				"height": "154.33203125",
-				"width": "159",
+				"left": "563.43627929688",
 				"top": "300.06172180176",
-				"left": "563.43627929688"
+				"width": "159",
+				"height": "154.33203125"
 			},
 			"displayable_fields_count": 5,
 			"fields_ordering": 1
 		},
 		"SalesPersons": {
 			"color": {
-				"alpha": "0",
-				"blue": "255",
+				"red": "255",
 				"green": "255",
-				"red": "255"
+				"blue": "255",
+				"alpha": "0"
 			},
 			"coordinates": {
-				"height": "110.41870117188",
-				"width": "117.93823242188",
+				"left": "811.1194152832",
 				"top": "179.05581665039",
-				"left": "811.1194152832"
+				"width": "117.93823242188",
+				"height": "110.41870117188"
 			},
 			"displayable_fields_count": 3,
 			"fields_ordering": 1
 		},
 		"Users": {
 			"color": {
-				"alpha": "0",
-				"blue": "255",
+				"red": "255",
 				"green": "255",
-				"red": "255"
+				"blue": "255",
+				"alpha": "0"
 			},
 			"coordinates": {
-				"height": "139.71929931641",
-				"width": "144.65405273438",
+				"left": "997.9067077637",
 				"top": "116",
-				"left": "997.9067077637"
+				"width": "144.65405273438",
+				"height": "139.71929931641"
 			},
 			"displayable_fields_count": 4,
 			"fields_ordering": 1
 		},
 		"Companies": {
 			"color": {
-				"alpha": "0",
-				"blue": "255",
+				"red": "255",
 				"green": "255",
-				"red": "255"
+				"blue": "255",
+				"alpha": "0"
 			},
 			"coordinates": {
-				"height": "102.33203125",
-				"width": "103",
+				"left": "422.69004821777",
 				"top": "200.23751831055",
-				"left": "422.69004821777"
+				"width": "103",
+				"height": "102.33203125"
 			},
 			"displayable_fields_count": 2,
 			"fields_ordering": 1
 		},
 		"INFO": {
 			"color": {
-				"alpha": "0",
-				"blue": "255",
+				"red": "255",
 				"green": "255",
-				"red": "255"
+				"blue": "255",
+				"alpha": "0"
 			},
 			"coordinates": {
-				"height": "167.33203125",
-				"width": "120",
+				"left": "162.82553100586",
 				"top": "14.781066894531",
-				"left": "162.82553100586"
+				"width": "120",
+				"height": "167.33203125"
 			},
 			"displayable_fields_count": 6,
 			"fields_ordering": 2,
@@ -114,34 +114,34 @@
 	"relations": {
 		"F72DD862679E4406AEC174710A30FFA1": {
 			"color": {
-				"alpha": "0",
-				"blue": "255",
+				"red": "255",
 				"green": "255",
-				"red": "255"
+				"blue": "255",
+				"alpha": "0"
 			}
 		},
 		"B7632F52907B4C818A6AB1D2269C67B3": {
 			"color": {
-				"alpha": "0",
-				"blue": "255",
+				"red": "255",
 				"green": "255",
-				"red": "255"
+				"blue": "255",
+				"alpha": "0"
 			}
 		},
 		"5EFAC8C08EFA44E8A6ED967985721F99": {
 			"color": {
-				"alpha": "0",
-				"blue": "255",
+				"red": "255",
 				"green": "255",
-				"red": "255"
+				"blue": "255",
+				"alpha": "0"
 			}
 		},
 		"D76DCD6C76E441709264EBD545EB4C08": {
 			"color": {
-				"alpha": "0",
-				"blue": "255",
+				"red": "255",
 				"green": "255",
-				"red": "255"
+				"blue": "255",
+				"alpha": "0"
 			}
 		}
 	}
