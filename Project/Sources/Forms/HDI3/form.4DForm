@@ -41,7 +41,7 @@
 					"left": 34,
 					"top": 30,
 					"width": 850,
-					"height": 700,
+					"height": 800,
 					"dataSource": "Form:C1466.customersDC",
 					"enterable": false,
 					"focusable": false,
@@ -55,7 +55,7 @@
 			}
 		}
 	],
-	"geometryStamp": 9,
+	"geometryStamp": 10,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

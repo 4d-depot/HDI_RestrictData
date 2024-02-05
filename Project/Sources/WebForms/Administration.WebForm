@@ -163,15 +163,15 @@
 					"height": "300px",
 					"borderRadius": "15px",
 					"borderWidth": "1px",
-					"width": "430px",
+					"width": "450px",
 					"backgroundColor": "#f2f2f2"
 				},
 				"datasource": "theSalesPerson.workings",
 				"gridProps": {
-					"styleboxWidth": 428,
+					"styleboxWidth": 1,
 					"styleboxHeight": 60,
-					"styleboxPercentWidth": "",
-					"enableMosaic": false
+					"styleboxPercentWidth": "100%",
+					"enableMosaic": true
 				},
 				"currentElement": ""
 			},
@@ -288,8 +288,7 @@
 					"justifyContent": "flex-start",
 					"height": "60px",
 					"paddingLeft": "20px",
-					"paddingTop": "20px",
-					"width": "auto"
+					"paddingTop": "20px"
 				}
 			},
 			"displayName": "Stylebox",
@@ -420,18 +419,22 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": ""
+								"text": "cat. ",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
 							},
 							{
 								"type": "datasource",
 								"datasource": "$This.category",
 								"children": [
 									{
-										"text": "category",
 										"bold": false,
 										"italic": false,
 										"underlined": false,
-										"strikethrough": false
+										"strikethrough": false,
+										"text": "category"
 									}
 								],
 								"dsType": "string",
@@ -445,7 +448,7 @@
 				],
 				"datasource": "$This.category",
 				"style": {
-					"width": "40px"
+					"width": "60px"
 				}
 			},
 			"displayName": "Text",

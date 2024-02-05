@@ -252,7 +252,8 @@
 				"style": {
 					"display": "flex",
 					"justifyContent": "flex-start",
-					"alignItems": "center"
+					"alignItems": "center",
+					"gap": "10px"
 				}
 			},
 			"displayName": "Stylebox",
@@ -260,7 +261,8 @@
 			"parent": "3YhTZigAHt",
 			"hidden": false,
 			"nodes": [
-				"cV-6OSCr4I"
+				"cV-6OSCr4I",
+				"O-IhcjVqCx"
 			],
 			"linkedNodes": {}
 		},
@@ -479,6 +481,61 @@
 			"displayName": "Input",
 			"custom": {},
 			"parent": "_cB4UVKuqi",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"O-IhcjVqCx": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Previous",
+				"classNames": [],
+				"events": [
+					{
+						"type": "navigation",
+						"id": "psethrKKKBCwGpPXHmQFJR",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "",
+						"parent": "webform-loader-self",
+						"target": "Administration"
+					}
+				],
+				"iconPosition": "hidden",
+				"style": {
+					"display": "flex",
+					"backgroundColor": "#f97e66",
+					"fontWeight": "500",
+					"fontSize": "20px"
+				}
+			},
+			"displayName": "Button",
+			"custom": {},
+			"parent": "R2sEeD5Oxa",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "qwy7ELRBfJ"
+			}
+		},
+		"qwy7ELRBfJ": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-star"
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "O-IhcjVqCx",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

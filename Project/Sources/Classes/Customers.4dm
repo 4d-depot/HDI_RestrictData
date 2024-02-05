@@ -9,7 +9,7 @@ Function event restrict() : cs:C1710.CustomersSelection
 	var $salesPerson : cs:C1710.SalesPersonsEntity
 	var $categories : Collection
 	
-	//Id $result is Null no filter is applied
+	//If $result is Null no filter is applied
 	$result:=Null:C1517
 	
 	Case of 

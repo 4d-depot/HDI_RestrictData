@@ -41,14 +41,12 @@
 				"name": "hideItem",
 				"content": "self {\nvisibility: hidden;\n}",
 				"parentId": null,
-				"scope": "local",
 				"id": "rDEs4iwue7lYZCth-U_HK"
 			},
 			{
 				"name": "showItem",
 				"content": "self {\nvisibility: visible;\n}",
 				"parentId": null,
-				"scope": "local",
 				"id": "vvMuVwe5vrnm5Cl26Atlo"
 			}
 		]
@@ -167,7 +165,8 @@
 			"nodes": [
 				"lu6zVkyJ9L",
 				"z_0gIjm2iO",
-				"c_CkO1KDCy"
+				"c_CkO1KDCy",
+				"UZSGkQ2Bxn"
 			],
 			"linkedNodes": {}
 		},
@@ -518,6 +517,20 @@
 						"returns": {
 							"name": "result",
 							"type": "Variable"
+						}
+					},
+					{
+						"type": "simple-action",
+						"id": "hN6PFqJjPFXHV7i6Phtcfv",
+						"events": [
+							"onclick"
+						],
+						"action": "empty",
+						"datasource": {
+							"name": "customers",
+							"from": "",
+							"type": "entitysel",
+							"namespace": ""
 						}
 					}
 				],
@@ -1031,6 +1044,84 @@
 			"displayName": "Text",
 			"custom": {},
 			"parent": "z_0gIjm2iO",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"UZSGkQ2Bxn": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"flexDirection": "row",
+					"alignItems": "center",
+					"justifyContent": "flex-end"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"pAwlMObc3v"
+			],
+			"linkedNodes": {}
+		},
+		"pAwlMObc3v": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Previous",
+				"classNames": [],
+				"events": [
+					{
+						"type": "navigation",
+						"id": "fmVQERdycdiSFvrFxMU86b",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "",
+						"parent": "webform-loader-self",
+						"target": "Login"
+					}
+				],
+				"iconPosition": "hidden",
+				"style": {
+					"display": "flex",
+					"backgroundColor": "#f97e66",
+					"fontWeight": "500",
+					"fontSize": "20px"
+				}
+			},
+			"displayName": "Button",
+			"custom": {},
+			"parent": "UZSGkQ2Bxn",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "5-1itrLrTA"
+			}
+		},
+		"5-1itrLrTA": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-star"
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "pAwlMObc3v",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

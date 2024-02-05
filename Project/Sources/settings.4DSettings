@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><preferences stamp="11">
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="13">
 	<com.4d>
 		<deployment>
 			<options/>
 		</deployment>
-		<general startup_environnement="0"/>
+		<general startup_environnement="1"/>
 		<interface>
 			<user splash_screen="false"/>
 		</interface>
@@ -21,7 +21,7 @@
 		</database>
 		<web>
 			<standalone_server>
-				<configuration allow_ssl="false" port_number="8044" publish_at_startup="true"/>
+				<configuration allow_ssl="true" port_number="8044" publish_at_startup="true"/>
 				<rest launch_at_startup="true"/>
 				<qodlystudio enabled="true"/>
 			</standalone_server>
