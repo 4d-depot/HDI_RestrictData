@@ -61,8 +61,6 @@ Case of
 				Form:C1466.currentUser:=Current user:C182()
 			Else 
 				LISTBOX SELECT ROW:C912(*; "SalesLB1"; 1; lk replace selection:K53:1)
-				Form:C1466.identifier:=Form:C1466.selectedSales.users.first().identifier
-				Form:C1466.password:="a"
 			End if 
 		End if 
 		

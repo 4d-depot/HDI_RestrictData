@@ -6,19 +6,18 @@ Class extends DataStoreImplementation
 //
 exposed Function authenticate($identifier : Text; $password : Text) : Text
 	
-	var $user : cs:C1710.UsersEntity
+	var $sp : cs:C1710.SalesPersonsEntity
 	
 	
-	$user:=ds:C1482.Users.query("identifier = :1"; $identifier).first()
+	$sp:=This:C1470.SalesPersons.query("identifier = :1"; $identifier).first()
 	
-	If ($user#Null:C1517)
-		If (Verify password hash:C1534($password; $user.password))
-			Session:C1714.clearPrivileges()
-			//Session.setPrivileges(New object("roles"; $user.role; "userName"; $user.firstname+" "+$user.lastname))
+	If ($sp#Null:C1517)
+		If (Verify password hash:C1534($password; $sp.password))
+			
 			Use (Session:C1714.storage)
 				Session:C1714.storage.info:=New shared object:C1526()
 				Use (Session:C1714.storage.info)
-					Session:C1714.storage.info.salesPerson:=This:C1470.SalesPersons.newSelection().add($user.salesPerson).copy(ck shared:K85:29)
+					Session:C1714.storage.info.salesPerson:=This:C1470.SalesPersons.newSelection().add($sp).copy(ck shared:K85:29)
 				End use 
 			End use 
 			return "OK"
@@ -35,9 +34,7 @@ exposed Function authenticate($identifier : Text; $password : Text) : Text
 exposed Function changeCurrentUser($sales : cs:C1710.SalesPersonsEntity)
 	
 	CHANGE CURRENT USER:C289($sales.userName; "a")
-	//Use (Storage.userInfo)
-	//Storage.userInfo[Current user]:=New shared object("salesPerson"; This.SalesPersons.query("userName = :1"; Current user).copy(ck shared))
-	//End use 
+	
 	
 	
 exposed Function selectCompany($company : cs:C1710.CompaniesEntity)
@@ -46,14 +43,14 @@ exposed Function selectCompany($company : cs:C1710.CompaniesEntity)
 	//We are in a web context
 	If (Session:C1714#Null:C1517)
 		Use (Session:C1714.storage.info)
-			Session:C1714.storage.info.selectedCompany:=ds:C1482.Companies.newSelection().add($company).copy(ck shared:K85:29)
+			Session:C1714.storage.info.selectedCompany:=This:C1470.Companies.newSelection().add($company).copy(ck shared:K85:29)
 		End use 
 		
 		//
 		//C/S
 	Else 
 		Use (Storage:C1525.userInfo)
-			Storage:C1525.userInfo[Current user:C182]:=New shared object:C1526("company"; ds:C1482.Companies.newSelection().add($company).copy(ck shared:K85:29))
+			Storage:C1525.userInfo[Current user:C182]:=New shared object:C1526("company"; This:C1470.Companies.newSelection().add($company).copy(ck shared:K85:29))
 		End use 
 	End if 
 	

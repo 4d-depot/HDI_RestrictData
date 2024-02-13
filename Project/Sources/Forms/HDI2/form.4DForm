@@ -496,7 +496,7 @@
 					"type": "button",
 					"text": "Authenticate",
 					"top": 350,
-					"left": 550,
+					"left": 710,
 					"width": 120,
 					"height": 30,
 					"events": [
@@ -507,7 +507,7 @@
 				},
 				"Input3": {
 					"type": "input",
-					"left": 550,
+					"left": 710,
 					"top": 250,
 					"width": 300,
 					"height": 20,
@@ -520,11 +520,11 @@
 				},
 				"Input4": {
 					"type": "input",
-					"left": 550,
+					"left": 710,
 					"top": 300,
 					"width": 300,
 					"height": 20,
-					"dataSource": "Form:C1466.selectedSales.password",
+					"dataSource": "\"*\"",
 					"hideFocusRing": true,
 					"stroke": "automatic",
 					"fill": "#EBEBEB",
@@ -536,7 +536,7 @@
 					"type": "listbox",
 					"left": 40,
 					"top": 250,
-					"width": 465,
+					"width": 615,
 					"height": 81,
 					"events": [],
 					"listboxType": "collection",
@@ -584,8 +584,8 @@
 							"footer": {
 								"name": "Footer29"
 							},
-							"dataSource": "This:C1470.users.first().identifier",
-							"width": 150
+							"dataSource": "This:C1470.identifier",
+							"width": 300
 						},
 						{
 							"header": {
@@ -759,7 +759,7 @@
 				},
 				"FullName": {
 					"type": "input",
-					"left": 100,
+					"left": 110,
 					"top": 320,
 					"width": 250,
 					"height": 20,
@@ -1376,5 +1376,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 1704
+	"geometryStamp": 1722
 }
