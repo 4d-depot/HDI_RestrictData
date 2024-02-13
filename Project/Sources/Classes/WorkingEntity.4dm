@@ -7,13 +7,11 @@ Class extends Entity
 
 exposed Function removeMe()
 	
-	var $work : cs:C1710.WorkingEntity
-	
-	
+	var $status : Object
 	
 	$status:=This:C1470.drop()
 	
-	//$status:=This.reload()
+	
 	
 	
 	

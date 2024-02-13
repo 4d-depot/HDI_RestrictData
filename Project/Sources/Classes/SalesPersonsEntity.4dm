@@ -1,11 +1,12 @@
 Class extends Entity
 
 
-//exposed Alias companies workings.company
 
 
-exposed Function get theCustomers($event : Object) : cs:C1710.CustomersSelection
+exposed Function get theCustomers() : cs:C1710.CustomersSelection
 	
+	var $work : cs:C1710.WorkingEntity
+	var $customers; $temp : cs:C1710.CustomersSelection
 	
 	$customers:=ds:C1482.Customers.newSelection()
 	
@@ -27,11 +28,11 @@ exposed Function get fullName() : Text
 	//----------------------------------------------
 	// QODLY
 	//----------------------------------------------
-	
-	
 exposed Function associateSalesCompany($category : Text; $company : cs:C1710.CompaniesEntity)
 	
+	var $work : cs:C1710.WorkingEntity
 	var $works : cs:C1710.WorkingSelection
+	var $status : Object
 	
 	$works:=This:C1470.workings.query("company.name = :1 and category = :2"; $company.name; $category)
 	
@@ -41,9 +42,6 @@ exposed Function associateSalesCompany($category : Text; $company : cs:C1710.Com
 		$work.category:=$category
 		$work.company:=$company
 		$status:=$work.save()
-		
-		//$status:=This.reload()
-		
 	End if 
 	
 	

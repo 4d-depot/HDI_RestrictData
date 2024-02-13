@@ -1,7 +1,8 @@
 
+var $result : Text
 
 
-$result:=Form:C1466.ds.authenticate(Form:C1466.identifier; Form:C1466.password)
+Form:C1466.ds.changeCurrentUser(Form:C1466.selectedSales2)
 
 Form:C1466.salesPerson:=Form:C1466.ds.getSalesPerson()
 Form:C1466.selectedSalesCustomers:=Form:C1466.salesPerson.theCustomers

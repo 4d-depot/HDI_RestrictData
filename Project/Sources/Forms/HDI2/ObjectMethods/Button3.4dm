@@ -1,11 +1,11 @@
 
-
-
+var $work : cs:C1710.WorkingEntity
 var $works : cs:C1710.WorkingSelection
+var $category : Text
+var $status : Object
+
 
 $category:=Form:C1466.categoryA ? "A" : "B"
-
-
 
 $works:=Form:C1466.selectedSales.workings.query("company.name = :1 and category = :2"; Form:C1466.selectedCompany.name; $category)
 

@@ -13,10 +13,11 @@ $coll:=JSON Parse:C1218($file.getText(); Is collection:K8:32)
 
 $sales:=ds:C1482.SalesPersons.fromCollection($coll)
 
-//For each ($obj; $coll)
-//$sp:=ds.SalesPersons.new()
-//$sp.firstname:=$obj.firstname
-//$sp.lastname:=$obj.lastname
-//$status:=$sp.save()
-//End for each 
+$i:=1
+
+For each ($sp; $sales)
+	$sp.userName:="sp"+String:C10($i)
+	$i:=$i+1
+	$status:=$sp.save()
+End for each 
 

@@ -3,17 +3,36 @@
 <base name="HDI_RestrictData" uuid="2D4F6103DC084198BFC0283C03D0A0B2" collation_locale="en">
 	<schema name="DEFAULT_SCHEMA"/>
 	<table name="INFO" uuid="107A367EBCC346259FD971E8FC1097DA" id="1">
-		<field name="ID" uuid="C6DBB917EEE44AF9BDA57ABA22C55C6B" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
-		<field name="Description" uuid="C9EFE648E9234AADA33FB25D61C0190B" type="10" never_null="true" id="2"/>
-		<field name="TabTitle" uuid="58AF214936C941439CB263026A5B46ED" type="10" limiting_length="255" never_null="true" id="3"/>
-		<field name="PageNumber" uuid="A2D86BBFD5134D06999CBDD14FD07A27" type="4" never_null="true" id="4"/>
+		<field name="ID" uuid="C6DBB917EEE44AF9BDA57ABA22C55C6B" type="4" unique="true" autosequence="true" not_null="true" id="1">
+			<field_extra position="1"/>
+		</field>
+		<field name="Description" uuid="C9EFE648E9234AADA33FB25D61C0190B" type="10" never_null="true" id="2">
+			<field_extra position="4"/>
+		</field>
+		<field name="TabTitle" uuid="58AF214936C941439CB263026A5B46ED" type="10" limiting_length="255" never_null="true" id="3">
+			<field_extra position="3"/>
+		</field>
+		<field name="PageNumber" uuid="A2D86BBFD5134D06999CBDD14FD07A27" type="4" never_null="true" id="4">
+			<field_extra position="2"/>
+		</field>
 		<primary_key field_name="ID" field_uuid="C6DBB917EEE44AF9BDA57ABA22C55C6B"/>
-		<table_extra input_form="Input" output_form="Output"/>
+		<table_extra input_form="Input" output_form="Output">
+			<editor_table_info displayable_fields_count="6" fields_ordering="2">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="162.82553100586" top="14.781066894531" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
 	</table>
 	<table name="Companies" uuid="3D87F0AD651D4BAA99AFA5C77E682BA9" id="2">
 		<field name="ID" uuid="7956D5BB794D48E191AB221270BFB590" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
 		<field name="name" uuid="5866879F6AD747B48658860EC7836C3A" type="10" limiting_length="255" never_null="true" id="2"/>
 		<primary_key field_name="ID" field_uuid="7956D5BB794D48E191AB221270BFB590"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="2" fields_ordering="1">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="422.69004821777" top="200.23751831055" width="103" height="102.33203125"/>
+			</editor_table_info>
+		</table_extra>
 	</table>
 	<table name="Users" uuid="1433FF2966B844BBAF2235240E0C50B2" id="3">
 		<field name="ID" uuid="7703120AB7104A39A29E1C41E49F9AE2" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
@@ -21,12 +40,25 @@
 		<field name="password" uuid="15E01C728C5F4BD4A690289175CE8712" type="10" limiting_length="255" never_null="true" id="3"/>
 		<field name="salesID" uuid="D37798257172471EA73AEFEFE5AC810C" type="4" never_null="true" id="4"/>
 		<primary_key field_name="ID" field_uuid="7703120AB7104A39A29E1C41E49F9AE2"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="4" fields_ordering="1">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="997.9067077637" top="116" width="144.65405273438" height="139.71929931641"/>
+			</editor_table_info>
+		</table_extra>
 	</table>
 	<table name="SalesPersons" uuid="DD9AC9A4550240DEB6781FD109C72453" id="4">
 		<field name="ID" uuid="123A623C7E9446C6B3E77FEDF4667237" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
 		<field name="firstname" uuid="5C596A8D852649ABB7648D861E8ECEC4" type="10" limiting_length="255" never_null="true" id="2"/>
 		<field name="lastname" uuid="74B8C79E1FEE44FD82E57553B3D98BC6" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="userName" uuid="A462740C675D4094BA0DB273BE261E7B" type="10" limiting_length="255" never_null="true" id="4"/>
 		<primary_key field_name="ID" field_uuid="123A623C7E9446C6B3E77FEDF4667237"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="3" fields_ordering="1">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="811.1194152832" top="179.05581665039" width="117.93823242188" height="110.41870117188"/>
+			</editor_table_info>
+		</table_extra>
 	</table>
 	<table name="Customers" uuid="86FC544ADD3548928B2CDDF3424EEFB5" id="5">
 		<field name="ID" uuid="BA45B4DAD8FC47419700B5D0C4A9B04C" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
@@ -35,6 +67,12 @@
 		<field name="category" uuid="B7CE9B7849ED4D27B2B65BB62331D50F" type="10" limiting_length="255" never_null="true" id="4"/>
 		<field name="companyID" uuid="5D0336085C4C4312A1514C87388B9125" type="4" never_null="true" id="5"/>
 		<primary_key field_name="ID" field_uuid="BA45B4DAD8FC47419700B5D0C4A9B04C"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="5" fields_ordering="1">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="563.43627929688" top="300.06172180176" width="159" height="154.33203125"/>
+			</editor_table_info>
+		</table_extra>
 	</table>
 	<table name="Working" uuid="1CC6D68EADDB47BD86256DF0F6D0EEB1" id="6">
 		<field name="ID" uuid="A6BF5462E54C4C8BA4709D4CD48D4D00" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
@@ -42,8 +80,14 @@
 		<field name="companyID" uuid="A59221BB92E04B268FD85C27DFCEF330" type="4" never_null="true" id="3"/>
 		<field name="category" uuid="4025DBB186DA4AC18B3EF1307E738457" type="10" limiting_length="255" never_null="true" id="4"/>
 		<primary_key field_name="ID" field_uuid="A6BF5462E54C4C8BA4709D4CD48D4D00"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="4" fields_ordering="1">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="593.88609313965" top="158" width="147.13037109375" height="128.90567016602"/>
+			</editor_table_info>
+		</table_extra>
 	</table>
-	<relation uuid="D76DCD6C76E441709264EBD545EB4C08" name_Nto1="salesPerson" name_1toN="workings" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+	<relation uuid="D76DCD6C76E441709264EBD545EB4C08" name_Nto1="salesPerson" name_1toN="workings" state="1">
 		<related_field kind="source">
 			<field_ref uuid="01B52C48ABE9480B8D6F03529BFDFEA4" name="salesID">
 				<table_ref uuid="1CC6D68EADDB47BD86256DF0F6D0EEB1" name="Working"/>
@@ -55,10 +99,12 @@
 			</field_ref>
 		</related_field>
 		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
-			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
 		</relation_extra>
 	</relation>
-	<relation uuid="5EFAC8C08EFA44E8A6ED967985721F99" name_Nto1="company" name_1toN="workings" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+	<relation uuid="5EFAC8C08EFA44E8A6ED967985721F99" name_Nto1="company" name_1toN="workings" state="1">
 		<related_field kind="source">
 			<field_ref uuid="A59221BB92E04B268FD85C27DFCEF330" name="companyID">
 				<table_ref uuid="1CC6D68EADDB47BD86256DF0F6D0EEB1" name="Working"/>
@@ -70,10 +116,12 @@
 			</field_ref>
 		</related_field>
 		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
-			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true"/>
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
 		</relation_extra>
 	</relation>
-	<relation uuid="B7632F52907B4C818A6AB1D2269C67B3" name_Nto1="company" name_1toN="customers" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+	<relation uuid="B7632F52907B4C818A6AB1D2269C67B3" name_Nto1="company" name_1toN="customers" state="1">
 		<related_field kind="source">
 			<field_ref uuid="5D0336085C4C4312A1514C87388B9125" name="companyID">
 				<table_ref uuid="86FC544ADD3548928B2CDDF3424EEFB5" name="Customers"/>
@@ -85,10 +133,12 @@
 			</field_ref>
 		</related_field>
 		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
-			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true"/>
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
 		</relation_extra>
 	</relation>
-	<relation uuid="F72DD862679E4406AEC174710A30FFA1" name_Nto1="salesPerson" name_1toN="users" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+	<relation uuid="F72DD862679E4406AEC174710A30FFA1" name_Nto1="salesPerson" name_1toN="users" state="1">
 		<related_field kind="source">
 			<field_ref uuid="D37798257172471EA73AEFEFE5AC810C" name="salesID">
 				<table_ref uuid="1433FF2966B844BBAF2235240E0C50B2" name="Users"/>
@@ -100,7 +150,9 @@
 			</field_ref>
 		</related_field>
 		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
-			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
 		</relation_extra>
 	</relation>
 	<index kind="regular" unique_keys="true" uuid="5AE2818773E646469584FA01F6E31471" type="7">
