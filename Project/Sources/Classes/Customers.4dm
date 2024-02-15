@@ -7,7 +7,7 @@ Function event restrict() : cs:C1710.CustomersSelection
 	
 	var $selectedCompany : cs:C1710.CompaniesEntity
 	var $salesPerson : cs:C1710.SalesPersonsEntity
-	var $categories : Collection
+	var $match : Boolean
 	
 	
 	Case of 
@@ -22,11 +22,16 @@ Function event restrict() : cs:C1710.CustomersSelection
 				//Sales person stored in the Session
 				$salesPerson:=Session:C1714.storage.salesPerson.first()
 				
-				//Categories of customers affected to this sales person for the selected company
-				$categories:=$salesPerson.workings.and($selectedCompany.workings).category
+				//Does the selected company is managed by the sales person stored in the session?
+				$match:=($salesPerson.workings.and($selectedCompany.workings).length#0)
 				
-				//$result is the applied filter - We return the concerned customers
-				$result:=$selectedCompany.customers.query("category IN :1"; $categories)
+				If ($match)
+					// We return the customers of the selected company
+					$result:=$selectedCompany.customers
+				Else 
+					// The sales person does not manage this company
+					$result:=This:C1470.newSelection()
+				End if 
 			End if 
 			
 			
@@ -40,11 +45,16 @@ Function event restrict() : cs:C1710.CustomersSelection
 				//Sales person matching the current user
 				$salesPerson:=ds:C1482.SalesPersons.query("userName = :1"; Current user:C182())
 				
-				//Categories of customers affected to this sales person for the selected company
-				$categories:=$salesPerson.workings.and($selectedCompany.workings).category
+				//Does the selected company is managed by the sales person (current user)?
+				$match:=($salesPerson.workings.and($selectedCompany.workings).length#0)
 				
-				//$result is the applied filter - We return the concerned customers
-				$result:=$selectedCompany.customers.query("category IN :1"; $categories)
+				If ($match)
+					// We return the customers of the selected company
+					$result:=$selectedCompany.customers
+				Else 
+					// The sales person does not manage this company
+					$result:=This:C1470.newSelection()
+				End if 
 				
 			End if 
 			

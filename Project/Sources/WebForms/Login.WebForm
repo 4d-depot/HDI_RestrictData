@@ -3,29 +3,29 @@
 		"v": "1.0",
 		"datasources": [
 			{
-				"id": "users",
+				"id": "password",
+				"type": "scalar",
+				"namespace": "",
+				"dataType": "string",
+				"initialValue": "a"
+			},
+			{
+				"id": "salesPersons",
 				"type": "entitysel",
-				"dataclass": "Users",
+				"dataclass": "SalesPersons",
 				"namespace": "",
 				"initialValue": "all",
 				"depth": null,
 				"pageSize": 100
 			},
 			{
-				"id": "theUser",
+				"id": "theSalesPerson",
 				"type": "entity",
-				"dataclass": "Users",
-				"from": "users",
+				"dataclass": "SalesPersons",
+				"from": "salesPersons",
 				"namespace": "",
 				"initialValue": "first",
 				"depth": null
-			},
-			{
-				"id": "password",
-				"type": "scalar",
-				"namespace": "",
-				"dataType": "string",
-				"initialValue": "a"
 			}
 		],
 		"styles": []
@@ -96,35 +96,37 @@
 				},
 				"headerHeight": 36,
 				"rowHeight": 30,
-				"datasource": "users",
+				"datasource": "salesPersons",
 				"columns": [
 					{
 						"title": "Firstname",
-						"source": "salesPerson.firstname",
+						"source": "firstname",
 						"width": 150,
 						"sorting": false,
 						"format": "",
+						"dataType": "string",
 						"id": "fDpsnS9ECERn28FxbhKxW4"
 					},
 					{
 						"title": "Lastname",
-						"source": "salesPerson.lastname",
+						"source": "lastname",
 						"width": 150,
 						"sorting": false,
 						"format": "",
+						"dataType": "string",
 						"id": "1ev51i5WLJFkBBRcFFndJJ"
 					},
 					{
 						"title": "Identifier",
 						"source": "identifier",
 						"format": "",
-						"width": "250px",
+						"width": "300px",
 						"sorting": false,
 						"dataType": "string",
 						"id": "uE84YT7vkCsQLm5N8A5K7U"
 					}
 				],
-				"currentElement": "theUser"
+				"currentElement": "theSalesPerson"
 			},
 			"displayName": "DataTable",
 			"custom": {},
@@ -174,20 +176,20 @@
 						"events": [
 							"onclick"
 						],
-						"id": "28aufYnj7DWHmRWSKYzMS9",
-						"method": "ds.authenticate",
+						"id": "qhAuYY352zBkDTWqJTnWFu",
+						"method": "ds.authentify",
 						"params": [
 							{
 								"name": "identifier",
 								"type": "Text",
-								"datasource": "theUser.identifier",
-								"id": "o741orSVekFfmsFMhcTWdy"
+								"datasource": "theSalesPerson.identifier",
+								"id": "5jKN7mv9rPrA4btCvdcZqY"
 							},
 							{
 								"name": "password",
 								"type": "Text",
 								"datasource": "password",
-								"id": "xnAwiZyyJP2QXYbRNSoi2f"
+								"id": "2XsP81madADzRZnp5AE2gD"
 							}
 						],
 						"datasource": "",
@@ -404,7 +406,7 @@
 				"type": "text",
 				"readOnly": true,
 				"style": {},
-				"datasource": "theUser.identifier",
+				"datasource": "theSalesPerson.identifier",
 				"moveable": false,
 				"placeholder": "",
 				"readonly": false

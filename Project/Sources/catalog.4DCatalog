@@ -67,7 +67,6 @@
 		<field name="ID" uuid="BA45B4DAD8FC47419700B5D0C4A9B04C" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
 		<field name="firstname" uuid="6914BF9AA0154CA08BC7BC412996579E" type="10" limiting_length="255" never_null="true" id="2"/>
 		<field name="lastname" uuid="A81CA8B4736A46AA820AD0641D397CEF" type="10" limiting_length="255" never_null="true" id="3"/>
-		<field name="category" uuid="B7CE9B7849ED4D27B2B65BB62331D50F" type="10" limiting_length="255" never_null="true" id="4"/>
 		<field name="companyID" uuid="5D0336085C4C4312A1514C87388B9125" type="4" never_null="true" id="5"/>
 		<primary_key field_name="ID" field_uuid="BA45B4DAD8FC47419700B5D0C4A9B04C"/>
 		<table_extra>
@@ -81,7 +80,6 @@
 		<field name="ID" uuid="A6BF5462E54C4C8BA4709D4CD48D4D00" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
 		<field name="salesID" uuid="01B52C48ABE9480B8D6F03529BFDFEA4" type="4" never_null="true" id="2"/>
 		<field name="companyID" uuid="A59221BB92E04B268FD85C27DFCEF330" type="4" never_null="true" id="3"/>
-		<field name="category" uuid="4025DBB186DA4AC18B3EF1307E738457" type="10" limiting_length="255" never_null="true" id="4"/>
 		<primary_key field_name="ID" field_uuid="A6BF5462E54C4C8BA4709D4CD48D4D00"/>
 		<table_extra>
 			<editor_table_info displayable_fields_count="4" fields_ordering="1">
@@ -144,11 +142,6 @@
 	<index kind="regular" unique_keys="true" uuid="5AE2818773E646469584FA01F6E31471" type="7">
 		<field_ref uuid="123A623C7E9446C6B3E77FEDF4667237" name="ID">
 			<table_ref uuid="DD9AC9A4550240DEB6781FD109C72453" name="SalesPersons"/>
-		</field_ref>
-	</index>
-	<index kind="regular" uuid="62644459243C4BE186536D3E02844B43" type="7">
-		<field_ref uuid="B7CE9B7849ED4D27B2B65BB62331D50F" name="category">
-			<table_ref uuid="86FC544ADD3548928B2CDDF3424EEFB5" name="Customers"/>
 		</field_ref>
 	</index>
 	<index kind="regular" unique_keys="true" uuid="7AEF5C8460D6450885C60398E9651E59" type="7">

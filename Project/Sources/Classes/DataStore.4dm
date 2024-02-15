@@ -4,7 +4,7 @@ Class extends DataStoreImplementation
 
 //We are in a web context
 //
-exposed Function authenticate($identifier : Text; $password : Text) : Text
+exposed Function authentify($identifier : Text; $password : Text) : Text
 	
 	var $sp : cs:C1710.SalesPersonsEntity
 	

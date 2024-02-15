@@ -1,26 +1,12 @@
 Class extends Entity
 
 
+exposed Alias customers workings.company.customers
 
 
-exposed Function get theCustomers() : cs:C1710.CustomersSelection
-	
-	var $work : cs:C1710.WorkingEntity
-	var $customers; $temp : cs:C1710.CustomersSelection
-	
-	$customers:=ds:C1482.Customers.newSelection()
-	
-	For each ($work; This:C1470.workings)
-		$temp:=$work.company.customers.query("category = :1"; $work.category)
-		
-		If ($temp.length#0)
-			$customers.add($temp)
-		End if 
-	End for each 
-	
-	return $customers
-	
-	
+
+
+
 exposed Function get fullName() : Text
 	return This:C1470.firstname+" "+This:C1470.lastname
 	
@@ -28,21 +14,24 @@ exposed Function get fullName() : Text
 	//----------------------------------------------
 	// QODLY
 	//----------------------------------------------
-exposed Function associateSalesCompany($category : Text; $company : cs:C1710.CompaniesEntity)
+exposed Function associateSalesCompany($company : cs:C1710.CompaniesEntity)
 	
 	var $work : cs:C1710.WorkingEntity
 	var $works : cs:C1710.WorkingSelection
 	var $status : Object
 	
-	$works:=This:C1470.workings.query("company.name = :1 and category = :2"; $company.name; $category)
+	$works:=This:C1470.workings.query("company.name = :1"; $company.name)
 	
 	If ($works.length=0)
 		$work:=ds:C1482.Working.new()
 		$work.salesPerson:=This:C1470
-		$work.category:=$category
+		//$work.category:=$category
 		$work.company:=$company
 		$status:=$work.save()
+		$work.company.reload()
+		This:C1470.reload()
 	End if 
+	
 	
 	
 	

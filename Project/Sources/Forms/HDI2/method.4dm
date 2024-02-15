@@ -17,7 +17,6 @@ Case of
 		Form:C1466.ds.clearSession()
 		Form:C1466.ds.clearStorage()
 		
-		Form:C1466.categoryA:=True:C214
 		
 		Form:C1466.salesPersons:=Form:C1466.ds.SalesPersons.all()
 		
@@ -36,7 +35,7 @@ Case of
 		
 		LISTBOX SELECT ROW:C912(*; "SalesLB"; 1; lk replace selection:K53:1)
 		
-		LISTBOX SELECT ROWS:C1715(*; "CustomersLB"; Form:C1466.selectedSales.theCustomers; lk replace selection:K53:1)
+		LISTBOX SELECT ROWS:C1715(*; "CustomersLB"; Form:C1466.selectedSales.customers; lk replace selection:K53:1)
 		
 		
 		
@@ -47,6 +46,9 @@ Case of
 		If (FORM Get current page:C276=3)
 			Form:C1466.ds.clearSession()
 			Form:C1466.ds.clearStorage()
+			
+			//Form.selectedSales:=Form.salesPersons.first()
+			LISTBOX SELECT ROW:C912(*; "SalesLB"; 1; lk replace selection:K53:1)
 			
 			OBJECT SET ENABLED:C1123(*; "RemoveCompanies"; Form:C1466.selectedWorkings#Null:C1517)
 			

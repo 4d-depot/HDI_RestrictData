@@ -214,7 +214,7 @@
 				},
 				"headerHeight": 50,
 				"rowHeight": 30,
-				"datasource": "theSalesPerson.theCustomers",
+				"datasource": "theSalesPerson.customers",
 				"columns": [
 					{
 						"title": "Firstname",
@@ -231,15 +231,6 @@
 						"width": "150px",
 						"sorting": false,
 						"id": "ec7TEA85EJqLKQptVanaNV"
-					},
-					{
-						"title": "Category",
-						"source": "category",
-						"format": "",
-						"width": "150px",
-						"sorting": false,
-						"dataType": "string",
-						"id": "uivfoBiX7S3A5Yi85AfCQt"
 					},
 					{
 						"title": "Company",
@@ -292,15 +283,6 @@
 						"width": "150px",
 						"sorting": false,
 						"id": "ec7TEA85EJqLKQptVanaNV"
-					},
-					{
-						"title": "Category",
-						"source": "category",
-						"format": "",
-						"width": 150,
-						"sorting": false,
-						"dataType": "string",
-						"id": "uivfoBiX7S3A5Yi85AfCQt"
 					},
 					{
 						"title": "Company",

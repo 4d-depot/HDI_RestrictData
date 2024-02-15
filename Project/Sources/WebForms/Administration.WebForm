@@ -37,13 +37,6 @@
 				"namespace": "",
 				"initialValue": "",
 				"depth": null
-			},
-			{
-				"id": "category",
-				"type": "scalar",
-				"namespace": "",
-				"dataType": "string",
-				"initialValue": "A"
 			}
 		],
 		"styles": []
@@ -201,7 +194,7 @@
 				},
 				"headerHeight": 50,
 				"rowHeight": 30,
-				"datasource": "theSalesPerson.theCustomers",
+				"datasource": "theSalesPerson.customers",
 				"columns": [
 					{
 						"title": "Firstname",
@@ -218,15 +211,6 @@
 						"width": "150px",
 						"sorting": false,
 						"id": "ec7TEA85EJqLKQptVanaNV"
-					},
-					{
-						"title": "Category",
-						"source": "category",
-						"format": "",
-						"width": "150px",
-						"sorting": false,
-						"dataType": "string",
-						"id": "uivfoBiX7S3A5Yi85AfCQt"
 					},
 					{
 						"title": "Company",
@@ -297,7 +281,6 @@
 			"hidden": false,
 			"nodes": [
 				"wogQ892Pgx",
-				"8PIqWNQYGM",
 				"8_C2BvewSq"
 			],
 			"linkedNodes": {}
@@ -407,94 +390,6 @@
 			"nodes": [],
 			"linkedNodes": {}
 		},
-		"8PIqWNQYGM": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "cat. ",
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							},
-							{
-								"type": "datasource",
-								"datasource": "$This.category",
-								"children": [
-									{
-										"bold": false,
-										"italic": false,
-										"underlined": false,
-										"strikethrough": false,
-										"text": "category"
-									}
-								],
-								"dsType": "string",
-								"format": ""
-							},
-							{
-								"text": ""
-							}
-						]
-					}
-				],
-				"datasource": "$This.category",
-				"style": {
-					"width": "60px"
-				}
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "sR0fO19y7E",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"ssq26iSZs7": {
-			"type": {
-				"resolvedName": "Radio"
-			},
-			"isCanvas": false,
-			"props": {
-				"classNames": [],
-				"events": [],
-				"defaultValue": "option1",
-				"mode": "single",
-				"type": "radio",
-				"options": [
-					{
-						"label": "A",
-						"value": "A",
-						"id": "iQ4MzdB73UtVRcT8gD4cYN"
-					},
-					{
-						"label": "B",
-						"value": "B",
-						"id": "2bC7qrwMPab6HDCZNuQLsj"
-					}
-				],
-				"datasource": "category",
-				"style": {
-					"display": "flex",
-					"justifyContent": "flex-start",
-					"alignItems": "center"
-				}
-			},
-			"displayName": "Radio",
-			"custom": {},
-			"parent": "9UNzN75Ncm",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
 		"UOOawHxLFm": {
 			"type": {
 				"resolvedName": "Button"
@@ -573,7 +468,6 @@
 			"hidden": false,
 			"nodes": [
 				"wKgbDU6mEj",
-				"9UNzN75Ncm",
 				"TlNy_F_KpC"
 			],
 			"linkedNodes": {}
@@ -594,12 +488,6 @@
 						"id": "68z6vJfEBdAP8o2134Q1Ta",
 						"method": "theSalesPerson.associateSalesCompany",
 						"params": [
-							{
-								"name": "category",
-								"type": "Text",
-								"datasource": "category",
-								"id": "wxe3ncz1QKXgEa8nBXby3S"
-							},
 							{
 								"name": "company",
 								"type": "cs.CompaniesEntity",
@@ -682,61 +570,6 @@
 			"parent": "TlNy_F_KpC",
 			"hidden": false,
 			"nodes": [],
-			"linkedNodes": {}
-		},
-		"SfvgGxuJXd": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Category",
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							}
-						]
-					}
-				],
-				"datasource": ""
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "9UNzN75Ncm",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"9UNzN75Ncm": {
-			"type": {
-				"resolvedName": "StyleBox"
-			},
-			"isCanvas": true,
-			"props": {
-				"events": [],
-				"style": {
-					"display": "flex",
-					"flexDirection": "row",
-					"alignItems": "center",
-					"justifyContent": "flex-start",
-					"gap": "10px"
-				}
-			},
-			"displayName": "Stylebox",
-			"custom": {},
-			"parent": "lyEB6N1T0g",
-			"hidden": false,
-			"nodes": [
-				"SfvgGxuJXd",
-				"ssq26iSZs7"
-			],
 			"linkedNodes": {}
 		},
 		"4qClYx5kr8": {
@@ -910,40 +743,6 @@
 			],
 			"linkedNodes": {}
 		},
-		"Ptv6NmLFv_": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "-",
-								"bold": true,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							}
-						]
-					}
-				],
-				"datasource": "",
-				"style": {
-					"fontSize": "22px",
-					"textAlign": "center"
-				}
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "8_C2BvewSq",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
 		"I4GHwdUbhF": {
 			"type": {
 				"resolvedName": "Text"
@@ -956,7 +755,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "1- Associate a sales person to a company + category of customers",
+								"text": "1- Associate a sales person to a company",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -1103,6 +902,40 @@
 			"nodes": [
 				"UOOawHxLFm"
 			],
+			"linkedNodes": {}
+		},
+		"Ptv6NmLFv_": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "-",
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"fontSize": "22px",
+					"textAlign": "center"
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "8_C2BvewSq",
+			"hidden": false,
+			"nodes": [],
 			"linkedNodes": {}
 		}
 	}
