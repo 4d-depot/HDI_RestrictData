@@ -15,9 +15,9 @@ exposed Function authenticate($identifier : Text; $password : Text) : Text
 		If (Verify password hash:C1534($password; $sp.password))
 			
 			Use (Session:C1714.storage)
-				Session:C1714.storage.info:=New shared object:C1526()
-				Use (Session:C1714.storage.info)
-					Session:C1714.storage.info.salesPerson:=This:C1470.SalesPersons.newSelection().add($sp).copy(ck shared:K85:29)
+				Session:C1714.storage.salesPerson:=New shared object:C1526()
+				Use (Session:C1714.storage.salesPerson)
+					Session:C1714.storage.salesPerson:=This:C1470.SalesPersons.newSelection().add($sp).copy(ck shared:K85:29)
 				End use 
 			End use 
 			return "OK"
@@ -29,25 +29,23 @@ exposed Function authenticate($identifier : Text; $password : Text) : Text
 	End if 
 	
 	
+	//Client server
 	//
-	//C/S
 exposed Function changeCurrentUser($sales : cs:C1710.SalesPersonsEntity)
-	
 	CHANGE CURRENT USER:C289($sales.userName; "a")
 	
 	
 	
 exposed Function selectCompany($company : cs:C1710.CompaniesEntity)
-	
 	//
 	//We are in a web context
 	If (Session:C1714#Null:C1517)
-		Use (Session:C1714.storage.info)
-			Session:C1714.storage.info.selectedCompany:=This:C1470.Companies.newSelection().add($company).copy(ck shared:K85:29)
+		Use (Session:C1714.storage)
+			Session:C1714.storage.selectedCompany:=This:C1470.Companies.newSelection().add($company).copy(ck shared:K85:29)
 		End use 
 		
 		//
-		//C/S
+		//Client server
 	Else 
 		Use (Storage:C1525.userInfo)
 			Storage:C1525.userInfo[Current user:C182]:=New shared object:C1526("company"; This:C1470.Companies.newSelection().add($company).copy(ck shared:K85:29))
@@ -56,18 +54,17 @@ exposed Function selectCompany($company : cs:C1710.CompaniesEntity)
 	
 	
 	
-	
 exposed Function getSalesPerson() : cs:C1710.SalesPersonsEntity
 	
 	//
 	//We are in a web context
 	If (Session:C1714#Null:C1517)
-		If (Session:C1714.storage.info.salesPerson#Null:C1517)
-			return Session:C1714.storage.info.salesPerson.first()
+		If (Session:C1714.storage.salesPerson#Null:C1517)
+			return Session:C1714.storage.salesPerson.first()
 		End if 
 	Else 
 		//
-		//C/S
+		//Client server
 		return This:C1470.SalesPersons.query("userName = :1"; Current user:C182).first()
 	End if 
 	
@@ -77,12 +74,12 @@ exposed Function getSelectedCompany() : cs:C1710.CompaniesEntity
 	//
 	//We are in a web context
 	If (Session:C1714#Null:C1517)
-		If (Session:C1714.storage.info.selectedCompany#Null:C1517)
-			return Session:C1714.storage.info.selectedCompany.first()
+		If (Session:C1714.storage.selectedCompany#Null:C1517)
+			return Session:C1714.storage.selectedCompany.first()
 		End if 
 	Else 
 		//
-		//C/S
+		//Client server
 		If (Storage:C1525.userInfo[Current user:C182]["company"]#Null:C1517)
 			Storage:C1525.userInfo[Current user:C182]["company"].first()
 		End if 
@@ -94,12 +91,13 @@ exposed Function getSelectedCompany() : cs:C1710.CompaniesEntity
 exposed Function clearSession()
 	If (Session:C1714#Null:C1517)
 		Use (Session:C1714.storage)
-			Session:C1714.storage.info:=New shared object:C1526
+			Session:C1714.storage.salesPerson:=Null:C1517
+			Session:C1714.storage.selectedCompany:=Null:C1517
 		End use 
 	End if 
 	
 	
-	// C/S context
+	// Client server context
 exposed Function clearStorage()
 	Use (Storage:C1525)
 		Storage:C1525.userInfo:=New shared object:C1526

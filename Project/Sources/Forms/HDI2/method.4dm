@@ -42,7 +42,9 @@ Case of
 		
 	: (Form event code:C388=On Page Change:K2:54)
 		
-		If (FORM Get current page:C276=2)
+		managesTexts
+		
+		If (FORM Get current page:C276=3)
 			Form:C1466.ds.clearSession()
 			Form:C1466.ds.clearStorage()
 			
@@ -51,7 +53,7 @@ Case of
 		End if 
 		
 		
-		If (FORM Get current page:C276=3)
+		If (FORM Get current page:C276=4)
 			
 			OBJECT SET ENABLED:C1123(*; "AuthenticateButton"; Application type:C494#4D Remote mode:K5:5)
 			OBJECT SET ENABLED:C1123(*; "ChangeUserButton"; Application type:C494=4D Remote mode:K5:5)
@@ -65,16 +67,15 @@ Case of
 		End if 
 		
 		
-		If (FORM Get current page:C276=4)
+		If (FORM Get current page:C276=5)
 			Form:C1466.companies.currentValue:=""
 			Form:C1466.companies.index:=-1
 			
 			OBJECT SET VISIBLE:C603(*; "UserName"; Application type:C494=4D Remote mode:K5:5)
 			OBJECT SET ENABLED:C1123(*; "AllCustomers"; False:C215)
 			OBJECT SET ENABLED:C1123(*; "ClearSession"; False:C215)
+			OBJECT SET ENABLED:C1123(*; "ClearStorage"; False:C215)
 			
-			OBJECT SET ENABLED:C1123(*; "ClearStorage"; Application type:C494=4D Remote mode:K5:5)
-			OBJECT SET ENABLED:C1123(*; "ClearSession"; Application type:C494#4D Remote mode:K5:5)
 			
 			Form:C1466.customers:=Null:C1517
 			

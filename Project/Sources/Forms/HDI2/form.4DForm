@@ -46,10 +46,10 @@
 			"objects": {
 				"information": {
 					"type": "input",
-					"top": 80,
+					"top": 140,
 					"left": 40,
 					"width": 650,
-					"height": 620,
+					"height": 500,
 					"sizingX": "grow",
 					"sizingY": "grow",
 					"dataSource": "Infos{1}",
@@ -66,15 +66,6 @@
 					],
 					"class": "description"
 				},
-				"Static Picture1": {
-					"type": "picture",
-					"top": 190,
-					"left": 726,
-					"width": 630,
-					"height": 400,
-					"picture": "Images/Static Picture1.png",
-					"pictureFormat": "scaled"
-				},
 				"ClearSession2": {
 					"type": "button",
 					"text": "View Customers dataclass class",
@@ -87,6 +78,41 @@
 					],
 					"method": "ObjectMethods/ClearSession2.4dm",
 					"focusable": false
+				},
+				"Static Picture1": {
+					"type": "picture",
+					"top": 130,
+					"left": 691,
+					"width": 689,
+					"height": 485,
+					"picture": "Images/Static Picture1.png",
+					"pictureFormat": "scaled"
+				}
+			}
+		},
+		{
+			"objects": {
+				"information4": {
+					"type": "input",
+					"top": 80,
+					"left": 40,
+					"width": 1250,
+					"height": 600,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Infos{2}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "description"
 				}
 			}
 		},
@@ -99,7 +125,7 @@
 					"width": 1200,
 					"height": 110,
 					"sizingY": "grow",
-					"dataSource": "Infos{2}",
+					"dataSource": "Infos{3}",
 					"focusable": false,
 					"fill": "transparent",
 					"borderStyle": "none",
@@ -1126,223 +1152,6 @@
 		},
 		{
 			"objects": {
-				"Rectangle2": {
-					"type": "rectangle",
-					"top": 251,
-					"left": 31,
-					"width": 643,
-					"height": 449,
-					"fill": "transparent",
-					"strokeDashArray": [
-						6,
-						2
-					],
-					"stroke": "#800080",
-					"strokeWidth": 0
-				},
-				"CustomersLB2": {
-					"type": "listbox",
-					"left": 51,
-					"top": 366,
-					"width": 535,
-					"height": 221,
-					"events": [],
-					"listboxType": "collection",
-					"dataSource": "Form:C1466.selectedSalesCustomers",
-					"selectionMode": "none",
-					"currentItemSource": "",
-					"focusable": false,
-					"scrollbarHorizontal": "hidden",
-					"rowHeight": "20px",
-					"headerHeight": "21px",
-					"rowFillSource": "",
-					"metaSource": "",
-					"hideSystemHighlight": false,
-					"columns": [
-						{
-							"header": {
-								"text": "Firstname",
-								"name": "Header30"
-							},
-							"name": "Column30",
-							"footer": {
-								"name": "Footer30"
-							},
-							"dataSource": "This:C1470.firstname",
-							"width": 120
-						},
-						{
-							"header": {
-								"name": "Header31",
-								"text": "Lastname"
-							},
-							"name": "Column31",
-							"dataSource": "This:C1470.lastname",
-							"footer": {
-								"name": "Footer31"
-							},
-							"width": 120
-						},
-						{
-							"header": {
-								"name": "Header32",
-								"text": "Category"
-							},
-							"name": "Column32",
-							"dataSource": "This:C1470.category",
-							"footer": {
-								"name": "Footer32"
-							},
-							"textAlign": "center",
-							"width": 80
-						},
-						{
-							"header": {
-								"name": "Header33",
-								"text": "Provider"
-							},
-							"name": "Column33",
-							"dataSource": "This:C1470.company.name",
-							"footer": {
-								"name": "Footer33"
-							},
-							"width": 200
-						}
-					]
-				},
-				"Text13": {
-					"type": "text",
-					"text": "AID TO MEMORY",
-					"top": 271,
-					"left": 56,
-					"width": 450,
-					"height": 16,
-					"stroke": "#800080",
-					"fontWeight": "bold",
-					"textAlign": "center"
-				},
-				"Text14": {
-					"type": "text",
-					"text": "View here all the customers managed by ",
-					"top": 317,
-					"left": 51,
-					"width": 300,
-					"height": 16,
-					"stroke": "automatic",
-					"fontWeight": "normal"
-				},
-				"Rectangle3": {
-					"type": "rectangle",
-					"top": 107,
-					"left": 119,
-					"width": 874,
-					"height": 90,
-					"fill": "transparent",
-					"strokeDashArray": [
-						6,
-						2
-					],
-					"stroke": "#800080",
-					"strokeWidth": 0
-				},
-				"Input8": {
-					"type": "input",
-					"left": 218,
-					"top": 122,
-					"width": 255,
-					"height": 20,
-					"dataSource": "Form:C1466.salesPerson.firstname",
-					"enterable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"fontWeight": "bold"
-				},
-				"Input9": {
-					"type": "input",
-					"left": 408,
-					"top": 122,
-					"width": 255,
-					"height": 20,
-					"dataSource": "Form:C1466.salesPerson.lastname",
-					"enterable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"fontWeight": "bold"
-				},
-				"Text15": {
-					"type": "text",
-					"text": "You are:",
-					"top": 122,
-					"left": 138,
-					"width": 100,
-					"height": 16,
-					"stroke": "#800080",
-					"fontWeight": "bold"
-				},
-				"Input10": {
-					"type": "input",
-					"left": 218,
-					"top": 162,
-					"width": 255,
-					"height": 20,
-					"dataSource": "Form:C1466.company.name",
-					"enterable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"fontWeight": "bold"
-				},
-				"Text16": {
-					"type": "text",
-					"text": "Company:",
-					"top": 162,
-					"left": 138,
-					"width": 100,
-					"height": 16,
-					"stroke": "#800080",
-					"fontWeight": "bold"
-				},
-				"Button1": {
-					"type": "button",
-					"text": "Previous",
-					"top": 646,
-					"left": 1243,
-					"width": 80,
-					"height": 35,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button1.4dm",
-					"fontWeight": "bold",
-					"fontSize": 14,
-					"stroke": "automatic",
-					"focusable": false
-				},
-				"Input1": {
-					"type": "input",
-					"left": 315,
-					"top": 317,
-					"width": 255,
-					"height": 20,
-					"dataSource": "Form:C1466.salesPerson.firstname",
-					"enterable": false,
-					"fill": "transparent",
-					"borderStyle": "none"
-				},
-				"Input5": {
-					"type": "input",
-					"left": 485,
-					"top": 317,
-					"width": 255,
-					"height": 20,
-					"dataSource": "Form:C1466.salesPerson.lastname",
-					"enterable": false,
-					"fill": "transparent",
-					"borderStyle": "none"
-				}
-			}
-		},
-		{
-			"objects": {
 				"Input": {
 					"type": "input",
 					"left": 68,
@@ -1376,5 +1185,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 1722
+	"geometryStamp": 1763
 }
