@@ -17,7 +17,7 @@
 		</field>
 		<primary_key field_name="ID" field_uuid="C6DBB917EEE44AF9BDA57ABA22C55C6B"/>
 		<table_extra input_form="Input" output_form="Output">
-			<editor_table_info displayable_fields_count="6" fields_ordering="2">
+			<editor_table_info fields_ordering="2" displayable_fields_count="6">
 				<color red="255" green="255" blue="255" alpha="0"/>
 				<coordinates left="162.82553100586" top="14.781066894531" width="120" height="167.33203125"/>
 			</editor_table_info>
@@ -28,7 +28,7 @@
 		<field name="name" uuid="5866879F6AD747B48658860EC7836C3A" type="10" limiting_length="255" never_null="true" id="2"/>
 		<primary_key field_name="ID" field_uuid="7956D5BB794D48E191AB221270BFB590"/>
 		<table_extra>
-			<editor_table_info displayable_fields_count="2" fields_ordering="1">
+			<editor_table_info fields_ordering="1" displayable_fields_count="2">
 				<color red="255" green="255" blue="255" alpha="0"/>
 				<coordinates left="422.69004821777" top="200.23751831055" width="103" height="102.33203125"/>
 			</editor_table_info>
@@ -51,13 +51,12 @@
 		<field name="ID" uuid="123A623C7E9446C6B3E77FEDF4667237" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
 		<field name="firstname" uuid="5C596A8D852649ABB7648D861E8ECEC4" type="10" limiting_length="255" never_null="true" id="2"/>
 		<field name="lastname" uuid="74B8C79E1FEE44FD82E57553B3D98BC6" type="10" limiting_length="255" never_null="true" id="3"/>
-		<field name="userName" uuid="A462740C675D4094BA0DB273BE261E7B" type="10" limiting_length="255" never_null="true" id="4"/>
+		<field name="userName" uuid="EDDF26B721D54F79BA9E9C3E9D27BA74" type="10" limiting_length="255" never_null="true" id="4"/>
 		<field name="identifier" uuid="B9EA8958739341A284B1F4C482E736D7" type="10" limiting_length="255" never_null="true" id="5"/>
 		<field name="password" uuid="BC4232CC8C7848D1AB24FC16835A21C3" type="10" limiting_length="255" never_null="true" id="6"/>
-		<field name="internalId" uuid="0E0D86256E5D4C5E8A4470ECE6060E96" type="3" never_null="true" id="7"/>
 		<primary_key field_name="ID" field_uuid="123A623C7E9446C6B3E77FEDF4667237"/>
 		<table_extra>
-			<editor_table_info fields_ordering="1" displayable_fields_count="3">
+			<editor_table_info displayable_fields_count="3" fields_ordering="1">
 				<color red="255" green="255" blue="255" alpha="0"/>
 				<coordinates left="811.1194152832" top="179.05581665039" width="117.93823242188" height="110.41870117188"/>
 			</editor_table_info>
@@ -70,7 +69,7 @@
 		<field name="companyID" uuid="5D0336085C4C4312A1514C87388B9125" type="4" never_null="true" id="5"/>
 		<primary_key field_name="ID" field_uuid="BA45B4DAD8FC47419700B5D0C4A9B04C"/>
 		<table_extra>
-			<editor_table_info displayable_fields_count="5" fields_ordering="1">
+			<editor_table_info fields_ordering="1" displayable_fields_count="5">
 				<color red="255" green="255" blue="255" alpha="0"/>
 				<coordinates left="563.43627929688" top="300.06172180176" width="159" height="154.33203125"/>
 			</editor_table_info>

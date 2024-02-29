@@ -29,14 +29,15 @@ exposed Function authentify($identifier : Text; $password : Text) : Text
 	End if 
 	
 	
-	//Client server
-	//
+	
 exposed Function changeCurrentUser($sales : cs:C1710.SalesPersonsEntity)
 	CHANGE CURRENT USER:C289($sales.userName; "a")
 	
 	
-	
 exposed Function selectCompany($company : cs:C1710.CompaniesEntity)
+	
+	TRACE:C157
+	
 	//
 	//We are in a web context
 	If (Session:C1714#Null:C1517)
@@ -55,6 +56,8 @@ exposed Function selectCompany($company : cs:C1710.CompaniesEntity)
 	
 	
 exposed Function getSalesPerson() : cs:C1710.SalesPersonsEntity
+	
+	TRACE:C157
 	
 	//
 	//We are in a web context

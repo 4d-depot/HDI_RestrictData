@@ -405,7 +405,9 @@
 				"className": "fd-input w-full bg-transparent",
 				"type": "text",
 				"readOnly": true,
-				"style": {},
+				"style": {
+					"width": "400px"
+				},
 				"datasource": "theSalesPerson.identifier",
 				"moveable": false,
 				"placeholder": "",

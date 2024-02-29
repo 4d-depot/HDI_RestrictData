@@ -17,7 +17,6 @@ Case of
 		Form:C1466.ds.clearSession()
 		Form:C1466.ds.clearStorage()
 		
-		
 		Form:C1466.salesPersons:=Form:C1466.ds.SalesPersons.all()
 		
 		Form:C1466.selectedSales:=Form:C1466.salesPersons.first()
@@ -37,6 +36,8 @@ Case of
 		
 		LISTBOX SELECT ROWS:C1715(*; "CustomersLB"; Form:C1466.selectedSales.customers; lk replace selection:K53:1)
 		
+		OBJECT SET ENABLED:C1123(*; "AuthenticateButton"; False:C215)
+		OBJECT SET ENABLED:C1123(*; "ChangeUserButton"; False:C215)
 		
 		
 	: (Form event code:C388=On Page Change:K2:54)
@@ -47,7 +48,6 @@ Case of
 			Form:C1466.ds.clearSession()
 			Form:C1466.ds.clearStorage()
 			
-			//Form.selectedSales:=Form.salesPersons.first()
 			LISTBOX SELECT ROW:C912(*; "SalesLB"; 1; lk replace selection:K53:1)
 			
 			OBJECT SET ENABLED:C1123(*; "RemoveCompanies"; Form:C1466.selectedWorkings#Null:C1517)
@@ -56,15 +56,14 @@ Case of
 		
 		
 		If (FORM Get current page:C276=4)
-			
-			OBJECT SET ENABLED:C1123(*; "AuthenticateButton"; Application type:C494#4D Remote mode:K5:5)
-			OBJECT SET ENABLED:C1123(*; "ChangeUserButton"; Application type:C494=4D Remote mode:K5:5)
-			
 			If (Application type:C494=4D Remote mode:K5:5)
 				LISTBOX SELECT ROW:C912(*; "SalesLB2"; 1; lk replace selection:K53:1)
 				Form:C1466.currentUser:=Current user:C182()
+				OBJECT SET ENABLED:C1123(*; "ChangeUserButton"; Application type:C494=4D Remote mode:K5:5)
+				
 			Else 
 				LISTBOX SELECT ROW:C912(*; "SalesLB1"; 1; lk replace selection:K53:1)
+				OBJECT SET ENABLED:C1123(*; "AuthenticateButton"; Application type:C494#4D Remote mode:K5:5)
 			End if 
 		End if 
 		

@@ -25,10 +25,8 @@ exposed Function associateSalesCompany($company : cs:C1710.CompaniesEntity)
 	If ($works.length=0)
 		$work:=ds:C1482.Working.new()
 		$work.salesPerson:=This:C1470
-		//$work.category:=$category
 		$work.company:=$company
 		$status:=$work.save()
-		$work.company.reload()
 		This:C1470.reload()
 	End if 
 	
