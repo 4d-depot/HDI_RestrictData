@@ -262,7 +262,7 @@
 				"events": [],
 				"loopable": true,
 				"style": {
-					"height": "340px"
+					"height": "370px"
 				},
 				"headerHeight": 50,
 				"rowHeight": 30,
@@ -931,7 +931,7 @@
 			"props": {
 				"events": [],
 				"style": {
-					"paddingTop": "38px"
+					"paddingTop": "12px"
 				}
 			},
 			"displayName": "Stylebox",
