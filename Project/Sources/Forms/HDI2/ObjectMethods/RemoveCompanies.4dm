@@ -1,5 +1,10 @@
 
 
+If (btnTrace)
+	TRACE:C157
+End if 
+
+
 
 var $notDropped : cs:C1710.WorkingSelection
 var $status : Object

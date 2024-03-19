@@ -12,7 +12,7 @@
 *.journal
 *.4DIndx
 *.Match
-*.4DD
+# *.4DD
 
 #--------------------------------
 # Ignore derived data

@@ -12,7 +12,6 @@ Function event restrict() : cs:C1710.CustomersSelection
 	
 	Case of 
 			
-			// Web context - There is a web session
 		: (Session:C1714#Null:C1517)
 			
 			If (Session:C1714.storage.selectedCompany#Null:C1517)
@@ -33,31 +32,6 @@ Function event restrict() : cs:C1710.CustomersSelection
 					$result:=This:C1470.newSelection()
 				End if 
 			End if 
-			
-			
-			// Client server - There is no web session
-		: (Current user:C182()#"")
-			
-			If (Storage:C1525.userInfo[Current user:C182]#Null:C1517)
-				//Selected company for the current user (stored in the Storage on the server)
-				$selectedCompany:=Storage:C1525.userInfo[Current user:C182]["company"].first()
-				
-				//Sales person matching the current user
-				$salesPerson:=ds:C1482.SalesPersons.query("userName = :1"; Current user:C182())
-				
-				//Does the selected company is managed by the sales person (current user)?
-				$match:=($salesPerson.workings.and($selectedCompany.workings).length#0)
-				
-				If ($match)
-					// We return the customers of the selected company
-					$result:=$selectedCompany.customers
-				Else 
-					// The sales person does not manage this company
-					$result:=This:C1470.newSelection()
-				End if 
-				
-			End if 
-			
 			
 	End case 
 	

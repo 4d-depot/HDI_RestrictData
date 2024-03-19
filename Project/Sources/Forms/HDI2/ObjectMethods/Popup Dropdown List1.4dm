@@ -1,5 +1,10 @@
 
 
+If (btnTrace)
+	TRACE:C157
+End if 
+
+
 Case of 
 		
 	: (Form event code:C388=On Data Change:K2:15)
@@ -10,8 +15,8 @@ Case of
 		
 		OBJECT SET ENABLED:C1123(*; "AllCustomers"; True:C214)
 		
-		OBJECT SET ENABLED:C1123(*; "ClearStorage"; Application type:C494=4D Remote mode:K5:5)
-		OBJECT SET ENABLED:C1123(*; "ClearSession"; Application type:C494#4D Remote mode:K5:5)
+		//OBJECT SET ENABLED(*; "ClearStorage"; Application type=4D Remote mode)
+		OBJECT SET ENABLED:C1123(*; "ClearSession"; True:C214)
 		
 End case 
 

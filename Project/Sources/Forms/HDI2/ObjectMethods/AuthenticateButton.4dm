@@ -1,4 +1,9 @@
 
+If (btnTrace)
+	TRACE:C157
+End if 
+
+
 var $result : Text
 
 $result:=Form:C1466.ds.authentify(Form:C1466.selectedSales.identifier; "a")

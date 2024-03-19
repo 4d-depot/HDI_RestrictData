@@ -1,4 +1,9 @@
 
+
+If (btnTrace)
+	TRACE:C157
+End if 
+
 var $work : cs:C1710.WorkingEntity
 var $works : cs:C1710.WorkingSelection
 var $status : Object
