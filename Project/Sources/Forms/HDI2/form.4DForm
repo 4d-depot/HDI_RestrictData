@@ -60,7 +60,7 @@
 					"type": "input",
 					"top": 110,
 					"left": 30,
-					"width": 576,
+					"width": 650,
 					"height": 350,
 					"sizingX": "grow",
 					"sizingY": "grow",
@@ -94,9 +94,9 @@
 				"Static Picture3": {
 					"type": "picture",
 					"top": 110,
-					"left": 600,
-					"width": 770,
-					"height": 410,
+					"left": 780,
+					"width": 590,
+					"height": 320,
 					"picture": "Images/Static Picture4.png",
 					"pictureFormat": "scaled"
 				}
@@ -253,7 +253,7 @@
 				},
 				"Text": {
 					"type": "text",
-					"text": "Select a sales person and associate them to a company + a category of customers",
+					"text": "Select a salesperson and associate them to a company + a category of customers",
 					"top": 220,
 					"left": 80,
 					"width": 600,
@@ -347,7 +347,7 @@
 				},
 				"Text3": {
 					"type": "text",
-					"text": "Customers list: the customers managed by the selected sales person are highlighted here",
+					"text": "Customers list: the customers managed by the selected salesperson are highlighted here",
 					"top": 390,
 					"left": 80,
 					"width": 600,
@@ -384,7 +384,7 @@
 				},
 				"Text5": {
 					"type": "text",
-					"text": "Managed companies for the selected sales person",
+					"text": "Managed companies for the selected salesperson",
 					"top": 260,
 					"left": 790,
 					"width": 400,
@@ -580,7 +580,7 @@
 				},
 				"Text8": {
 					"type": "text",
-					"text": "Select a sales person to authenticate as them",
+					"text": "Select a salesperson to authenticate as",
 					"top": 220,
 					"left": 40,
 					"width": 450,
@@ -888,7 +888,8 @@
 					"focusable": false,
 					"fill": "transparent",
 					"borderStyle": "none",
-					"styledText": true
+					"styledText": true,
+					"fontStyle": "italic"
 				},
 				"Input11": {
 					"type": "input",
@@ -901,7 +902,8 @@
 					"focusable": false,
 					"fill": "transparent",
 					"borderStyle": "none",
-					"styledText": true
+					"styledText": true,
+					"fontStyle": "italic"
 				},
 				"information3": {
 					"type": "input",
@@ -998,5 +1000,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 2246
+	"geometryStamp": 2277
 }

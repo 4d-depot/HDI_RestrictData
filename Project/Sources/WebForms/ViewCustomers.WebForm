@@ -588,7 +588,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Connected sales person:",
+								"text": "Connected salesperson:",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -1007,7 +1007,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "No sales person / company in the session",
+								"text": "No salesperson / company in the session",
 								"bold": false,
 								"italic": false,
 								"underlined": false,

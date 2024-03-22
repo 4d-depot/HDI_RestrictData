@@ -605,7 +605,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Sales persons",
+								"text": "Salespersons",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -755,7 +755,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "1- Associate a sales person to a company",
+								"text": "1- Associate a salesperson to a company",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -815,7 +815,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "View here the customers managed by the selected sales person (",
+								"text": "View here the customers managed by the selected salesperson (",
 								"bold": false,
 								"italic": false,
 								"underlined": false,

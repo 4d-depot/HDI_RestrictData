@@ -4,20 +4,19 @@ Class extends DataStoreImplementation
 
 exposed Function authentify($identifier : Text; $password : Text) : Text
 	
+	var $salesPersons : cs:C1710.SalesPersonsSelection
 	var $sp : cs:C1710.SalesPersonsEntity
 	
-	
-	$sp:=This:C1470.SalesPersons.query("identifier = :1"; $identifier).first()
+	$salesPersons:=This:C1470.SalesPersons.query("identifier = :1"; $identifier)
+	$sp:=$salesPersons.first()
 	
 	If ($sp#Null:C1517)
 		If (Verify password hash:C1534($password; $sp.password))
 			
 			Use (Session:C1714.storage)
-				Session:C1714.storage.salesPerson:=New shared object:C1526()
-				Use (Session:C1714.storage.salesPerson)
-					Session:C1714.storage.salesPerson:=This:C1470.SalesPersons.newSelection().add($sp).copy(ck shared:K85:29)
-				End use 
+				Session:C1714.storage.salesPerson:=$salesPersons
 			End use 
+			
 			return "OK"
 		Else 
 			return "Authentication failed: wrong password"
