@@ -15,7 +15,6 @@ Case of
 		
 		OBJECT SET ENABLED:C1123(*; "AllCustomers"; True:C214)
 		
-		//OBJECT SET ENABLED(*; "ClearStorage"; Application type=4D Remote mode)
 		OBJECT SET ENABLED:C1123(*; "ClearSession"; True:C214)
 		
 End case 

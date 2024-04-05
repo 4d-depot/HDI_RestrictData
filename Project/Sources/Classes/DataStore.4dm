@@ -27,12 +27,6 @@ exposed Function authentify($identifier : Text; $password : Text) : Text
 	
 	
 	
-	//exposed Function changeCurrentUser($sales : cs.SalesPersonsEntity)
-	
-	//TRACE
-	
-	//CHANGE CURRENT USER($sales.userName; "a")
-	
 	
 exposed Function selectCompany($company : cs:C1710.CompaniesEntity)
 	
@@ -40,13 +34,6 @@ exposed Function selectCompany($company : cs:C1710.CompaniesEntity)
 		Use (Session:C1714.storage)
 			Session:C1714.storage.selectedCompany:=This:C1470.Companies.newSelection().add($company).copy(ck shared:K85:29)
 		End use 
-		
-		//
-		//Client server
-		//Else 
-		//Use (Storage.userInfo)
-		//Storage.userInfo[Current user]:=New shared object("company"; This.Companies.newSelection().add($company).copy(ck shared))
-		//End use 
 	End if 
 	
 	
@@ -57,27 +44,15 @@ exposed Function getSalesPerson() : cs:C1710.SalesPersonsEntity
 		If (Session:C1714.storage.salesPerson#Null:C1517)
 			return Session:C1714.storage.salesPerson.first()
 		End if 
-		//Else 
-		////
-		////Client server
-		//return This.SalesPersons.query("userName = :1"; Current user).first()
 	End if 
 	
 	
 exposed Function getSelectedCompany() : cs:C1710.CompaniesEntity
 	
-	//
-	//We are in a web context
 	If (Session:C1714#Null:C1517)
 		If (Session:C1714.storage.selectedCompany#Null:C1517)
 			return Session:C1714.storage.selectedCompany.first()
 		End if 
-		//Else 
-		////
-		////Client server
-		//If (Storage.userInfo[Current user]["company"]#Null)
-		//Storage.userInfo[Current user]["company"].first()
-		//End if 
 	End if 
 	
 	
@@ -88,14 +63,6 @@ exposed Function clearSession()
 			Session:C1714.storage.selectedCompany:=Null:C1517
 		End use 
 	End if 
-	
-	
-	// Client server context
-	//exposed Function clearStorage()
-	//Use (Storage)
-	//Storage.userInfo:=New shared object
-	//End use 
-	
 	
 	
 	//----------------------------------------------

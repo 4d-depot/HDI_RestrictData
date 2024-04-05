@@ -19,7 +19,6 @@ Case of
 		End if 
 		
 		Form:C1466.ds.clearSession()
-		//Form.ds.clearStorage()
 		
 		Form:C1466.salesPersons:=Form:C1466.ds.SalesPersons.all()
 		Form:C1466.selectedSales:=Form:C1466.salesPersons.first()
@@ -43,7 +42,6 @@ Case of
 		
 		If (FORM Get current page:C276=3)
 			Form:C1466.ds.clearSession()
-			//Form.ds.clearStorage()
 			
 			LISTBOX SELECT ROW:C912(*; "SalesLB"; 1; lk replace selection:K53:1)
 			LISTBOX SELECT ROWS:C1715(*; "CustomersLB"; Form:C1466.selectedSales.customers; lk replace selection:K53:1)
@@ -53,19 +51,7 @@ Case of
 		
 		
 		If (FORM Get current page:C276=4)
-			
-			//OBJECT SET ENABLED(*; "AuthenticateButton"; False)
-			//OBJECT SET ENABLED(*; "ChangeUserButton"; False)
-			
-			//If (Application type=4D Remote mode)
-			//LISTBOX SELECT ROW(*; "SalesLB2"; 1; lk replace selection)
-			//Form.currentUser:=Current user()
-			//OBJECT SET ENABLED(*; "ChangeUserButton"; Application type=4D Remote mode)
-			
-			//Else 
 			LISTBOX SELECT ROW:C912(*; "SalesLB1"; 1; lk replace selection:K53:1)
-			//OBJECT SET ENABLED(*; "AuthenticateButton"; Application type#4D Remote mode)
-			//End if 
 		End if 
 		
 		
@@ -73,11 +59,8 @@ Case of
 			Form:C1466.companies.currentValue:=""
 			Form:C1466.companies.index:=-1
 			
-			//OBJECT SET VISIBLE(*; "UserName"; Application type=4D Remote mode)
 			OBJECT SET ENABLED:C1123(*; "AllCustomers"; False:C215)
 			OBJECT SET ENABLED:C1123(*; "ClearSession"; False:C215)
-			//OBJECT SET ENABLED(*; "ClearStorage"; False)
-			
 			
 			Form:C1466.customers:=Null:C1517
 			
