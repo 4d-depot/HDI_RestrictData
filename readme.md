@@ -2,7 +2,7 @@
 
 Get started with filtering data (4D 20 R5)
 
-Find more information on the [blog post](https://blog.4d.com/).
+Find more information on the [blog post](https://blog.4d.com/orda-restrict-data-to-relevant-criteria/).
 
 ## Installing and Using a 4D Project
 
